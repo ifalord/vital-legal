@@ -1,9 +1,20 @@
-# Vital — Documentos legales
+# Vital — Legal Documents
 
-Documentos legales públicos de la app Vital (operada por IFA- TECH LLC, Florida, EE. UU.).
+Public legal documents for the Vital app, operated by IFA- TECH LLC (Florida, USA).
 
-- [Términos y Condiciones](terms.html)
-- [Política de Privacidad](privacy.html)
-- [Aviso Médico](medical-disclaimer.html)
+## English (primary)
 
-Operador: **IFA- TECH LLC** · Doral, FL 33166 · Contacto: vital-app@ifa-tech.com
+- [Terms of Service](terms.html)
+- [Privacy Policy](privacy.html)
+- [Medical Disclaimer](medical-disclaimer.html)
+
+## Español
+
+- [Términos de uso](es/terms.html)
+- [Política de privacidad](es/privacy.html)
+- [Aviso médico](es/medical-disclaimer.html)
+
+---
+
+Operator: **IFA- TECH LLC** · 7950 NW 53rd St, Suite 342, Doral, FL 33166, USA
+Contact: vital-app@ifa-tech.com

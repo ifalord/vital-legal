@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aviso médico — Vital</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+      color: #0F172A;
+      background: #FAFBFC;
+      line-height: 1.65;
+    }
+    h1 { font-size: 28px; margin: 0 0 8px; letter-spacing: -0.5px; }
+    h2 { font-size: 19px; margin: 32px 0 12px; color: #0E7490; }
+    p { margin: 0 0 14px; }
+    ul { padding-left: 22px; }
+    li { margin: 4px 0; }
+    .meta { color: #64748B; font-size: 13px; margin-bottom: 32px; padding-bottom: 16px; border-bottom: 1px solid #E5E7EB; }
+    .placeholder { background: #FEF3C7; color: #92400E; padding: 1px 6px; border-radius: 3px; font-weight: 600; }
+    .danger { background: #FEF2F2; border: 2px solid #DC2626; padding: 16px 20px; margin: 20px 0; border-radius: 8px; }
+    .danger strong { color: #991B1B; font-size: 17px; }
+    .warning { background: #FFFBEB; border-left: 4px solid #D97706; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0; }
+    a { color: #0E7490; }
+    nav { margin-bottom: 24px; }
+    nav a { font-size: 13px; color: #64748B; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav><a href="./index.html">← Información legal</a></nav>
+  <h1>Aviso médico</h1>
+  <p class="meta">Última actualización: <span class="placeholder">30 de junio de 2026</span></p>
+
+  <div class="danger">
+    <strong>⚠ Vital NO es un dispositivo médico</strong>
+    <p style="margin-top: 12px; margin-bottom: 0;">
+      Vital es una herramienta de acompañamiento y organización personal. <strong>No diagnostica, no prescribe, no trata enfermedades y no sustituye a un profesional sanitario.</strong> Toda decisión sobre tu salud debe consultarse con tu médico, farmacéutico u otro profesional sanitario cualificado.
+    </p>
+  </div>
+
+  <h2>1. Qué hace Vital</h2>
+  <p>Vital es una aplicación de bienestar y autogestión que te ayuda a:</p>
+  <ul>
+    <li>Recordar cuándo tomar tus medicamentos.</li>
+    <li>Llevar un diario de cómo te sientes, qué comes y qué síntomas tienes.</li>
+    <li>Registrar mediciones vitales que tú mismo capturas (tensión, glucosa, peso, etc.).</li>
+    <li>Conversar con un asistente que organiza la información que tú aportas.</li>
+    <li>Compartir información seleccionada con tus cuidadores designados.</li>
+    <li>Preparar resúmenes que puedes llevar a tu cita médica.</li>
+  </ul>
+
+  <h2>2. Qué NO hace Vital</h2>
+  <ul>
+    <li><strong>No diagnostica enfermedades.</strong> Los patrones que detecta la IA son observaciones sobre tus datos, no diagnósticos.</li>
+    <li><strong>No prescribe medicamentos</strong> ni ajusta dosis.</li>
+    <li><strong>No emite consejo médico.</strong> Sus sugerencias son informativas y orientativas.</li>
+    <li><strong>No es un servicio de emergencias.</strong> Si tienes una urgencia médica, llama al número de emergencias de tu país (<span class="placeholder">911 (EE. UU.), 112 (UE), o el número local de tu país</span>, ej. 112 en España, 911 en EE. UU.).</li>
+    <li><strong>No sustituye al control profesional</strong> de tu enfermedad crónica.</li>
+  </ul>
+
+  <h2>3. Inteligencia artificial: límites importantes</h2>
+  <p>Vital usa modelos de inteligencia artificial para varias funciones. Estos modelos:</p>
+  <ul>
+    <li><strong>Pueden equivocarse.</strong> Pueden devolver información incorrecta, desactualizada o incompleta.</li>
+    <li><strong>No conocen tu historial clínico completo</strong>, solo lo que tú introduces en la app.</li>
+    <li><strong>No tienen criterio clínico.</strong> Operan con patrones estadísticos, no con juicio médico.</li>
+    <li><strong>Pueden inventar (alucinaciones).</strong> Especialmente en preguntas muy específicas sobre fármacos, dosis o efectos.</li>
+  </ul>
+  <p><strong>Antes de tomar cualquier decisión basada en lo que te diga la IA, verifica la información con tu profesional sanitario.</strong></p>
+
+  <h2>4. Identificación de pastillas por foto</h2>
+  <p>La función de identificación de pastillas por cámara es <strong>orientativa</strong>. Muchas pastillas son visualmente idénticas pero contienen principios activos distintos. <strong>Nunca tomes un medicamento basándote únicamente en la identificación visual de Vital.</strong> Verifica siempre con el envase original, el prospecto o tu farmacéutico.</p>
+
+  <h2>5. Lectura de recetas por foto</h2>
+  <p>La función de OCR de receta médica extrae el texto que ve la cámara y puede cometer errores de lectura. <strong>Revisa siempre los datos extraídos contra la receta original antes de guardar.</strong></p>
+
+  <h2>6. Detector de interacciones medicamentosas</h2>
+  <p>La verificación de interacciones es <strong>orientativa y no exhaustiva</strong>. Se basa en información de farmacopeas públicas procesada por IA. No incluye todas las interacciones posibles, no considera tu historial completo y no sustituye la revisión por tu médico o farmacéutico.</p>
+
+  <h2>7. Recordatorios de medicamentos</h2>
+  <p>Los recordatorios son notificaciones locales del dispositivo. Su entrega depende de:</p>
+  <ul>
+    <li>Que tengas las notificaciones activadas y no en modo "No molestar".</li>
+    <li>Que el dispositivo tenga batería y esté encendido.</li>
+    <li>Que no hayas eliminado la app.</li>
+  </ul>
+  <p><strong>Vital no garantiza la entrega del recordatorio.</strong> Si la dosis es crítica (anticoagulantes, antiepilépticos, insulina, etc.), no confíes únicamente en la app — usa un sistema redundante (alarma adicional, pastillero físico, recordatorio de un familiar).</p>
+
+  <h2>8. Cuidadores</h2>
+  <p>El sistema de cuidadores te permite compartir información con personas de tu confianza. <strong>Cualquier alerta enviada a un cuidador depende de que reciba la notificación y pueda actuar.</strong> Vital no garantiza que el cuidador atienda la alerta. En caso de emergencia, llama directamente al número de emergencias.</p>
+
+  <h2>9. Datos sobre wearables</h2>
+  <p>Los datos de wearables (Apple Watch, sensores de Health Connect) los proporciona el dispositivo y Vital los muestra sin validación clínica. <strong>No son grado médico.</strong> Consulta el manual del fabricante de tu wearable para conocer la precisión declarada.</p>
+
+  <h2>10. Cuándo NO usar Vital</h2>
+  <ul>
+    <li>En una <strong>emergencia médica</strong> (dolor torácico súbito, dificultad respiratoria, pérdida de conciencia, hemorragia, signos de ictus). Llama a emergencias.</li>
+    <li>Para automedicarte basándote en sus sugerencias.</li>
+    <li>Para suspender un tratamiento prescrito sin consultar a tu médico.</li>
+    <li>Como única referencia para administrar medicación a un menor o persona dependiente — siempre con supervisión profesional.</li>
+  </ul>
+
+  <h2>11. Sí, usa Vital para</h2>
+  <ul>
+    <li>Organizar tus medicamentos y horarios.</li>
+    <li>Llevar un diario que después puedas enseñar a tu médico.</li>
+    <li>Recordar preguntas que quieres hacer en tu próxima cita.</li>
+    <li>Detectar patrones que merece la pena conversar con tu profesional sanitario.</li>
+    <li>Compartir tu evolución con tu red de apoyo.</li>
+  </ul>
+
+  <h2>12. Exención de responsabilidad</h2>
+  <p>Al usar Vital reconoces que:</p>
+  <ul>
+    <li>Has leído y entendido este aviso médico.</li>
+    <li>Vital no es responsable de decisiones que tomes basándote en la información que muestra.</li>
+    <li>Mantendrás tu seguimiento médico habitual con tus profesionales sanitarios.</li>
+    <li>En caso de duda sobre tu salud, consultarás siempre con un profesional cualificado.</li>
+  </ul>
+
+  <h2>13. Contacto</h2>
+  <p>
+    Si tienes dudas sobre el alcance médico de Vital, escríbenos a <a href="mailto:vital-app@ifa-tech.com"><span class="placeholder">vital-app@ifa-tech.com</span></a>.
+  </p>
+
+</body>
+</html>
