@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vital — Información legal</title>
+  <style>
+    :root {
+      --ink: #0F172A;
+      --soft: #64748B;
+      --brand: #0E7490;
+      --bg: #FAFBFC;
+      --line: #E5E7EB;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+    h1 { font-size: 28px; margin: 0 0 8px; letter-spacing: -0.5px; }
+    p.lede { color: var(--soft); margin: 0 0 32px; font-size: 17px; }
+    a.tile {
+      display: block;
+      padding: 20px 24px;
+      margin: 12px 0;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--ink);
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.1s;
+    }
+    a.tile:hover { border-color: var(--brand); }
+    a.tile:active { transform: scale(0.995); }
+    a.tile strong { color: var(--brand); font-size: 17px; }
+    a.tile p { margin: 4px 0 0; color: var(--soft); font-size: 14px; }
+    footer { margin-top: 48px; color: var(--soft); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>Vital — Información legal</h1>
+  <p class="lede">Documentos que rigen el uso de Vital.</p>
+
+  <a class="tile" href="./terms.html">
+    <strong>Términos de uso →</strong>
+    <p>Condiciones del servicio, suscripciones, responsabilidades</p>
+  </a>
+
+  <a class="tile" href="./privacy.html">
+    <strong>Política de privacidad →</strong>
+    <p>Qué datos recogemos, para qué, con quién, tus derechos</p>
+  </a>
+
+  <a class="tile" href="./medical-disclaimer.html">
+    <strong>Aviso médico →</strong>
+    <p>Vital no reemplaza atención médica profesional</p>
+  </a>
+
+  <footer>
+    <p>
+      Contacto: <a href="mailto:vital-app@ifa-tech.com">vital-app@ifa-tech.com</a><br>
+      Última actualización: 30 de junio de 2026
+    </p>
+  </footer>
+</body>
+</html>
