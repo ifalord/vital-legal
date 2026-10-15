@@ -35,7 +35,7 @@
   <nav><a href="./index.html">← Información legal</a></nav>
   <h1>Política de privacidad</h1>
   <p class="meta">
-    Última actualización: <span class="placeholder">30 de junio de 2026</span><br>
+    Última actualización: <span class="placeholder">15 de octubre de 2026</span><br>
     Responsable del tratamiento: <span class="placeholder">IFA- TECH LLC</span><br>
     Dirección: <span class="placeholder">7950 NW 53rd St, Suite 342, Doral, FL 33166, USA</span><br>
     Contacto DPO/Privacidad: <a href="mailto:vital-app@ifa-tech.com"><span class="placeholder">vital-app@ifa-tech.com</span></a>
@@ -43,7 +43,7 @@
 
   <div class="key">
     <strong>Resumen humano (no sustituye al texto completo):</strong><br>
-    Recogemos los datos que tú decides darnos para que la app funcione. Tus datos médicos son tuyos. Nunca los vendemos. Los compartimos sólo con los proveedores técnicos que necesitamos para operar (Supabase, OpenRouter, Apple, Google). Puedes exportarlos o borrarlos cuando quieras desde Ajustes → Privacidad y datos.
+    Recogemos los datos que tú decides darnos para que la app funcione. Tus datos médicos son tuyos. Nunca los vendemos. Los compartimos sólo con los proveedores técnicos que necesitamos para operar (Supabase, OpenRouter, Apple, Google). Puedes exportarlos o borrarlos cuando quieras desde Ajustes → Privacidad y datos. Las funciones de IA, que envían algunos de tus registros a servicios de IA, están desactivadas hasta que las permitas dentro de la app, y puedes apagarlas cuando quieras sin eliminar tu cuenta.
   </div>
 
   <h2>1. Qué datos recogemos</h2>
@@ -78,7 +78,8 @@
   <p>Vital trata <strong>datos de salud</strong>, que el Reglamento General de Protección de Datos clasifica como categoría especial. Esto exige una protección reforzada. Tu base legal para el tratamiento es:</p>
   <ul>
     <li><strong>Consentimiento explícito</strong> (art. 9.2.a GDPR), prestado al aceptar esta política durante el registro y al introducir cada dato.</li>
-    <li>Puedes retirar tu consentimiento en cualquier momento eliminando tu cuenta, lo que provoca el borrado de todos tus datos.</li>
+    <li><strong>Para las funciones de IA, un consentimiento explícito aparte</strong>, que das dentro de la app (no al aceptar esta política) antes de que se ejecute cualquier función de IA. Queda registrado y puedes retirarlo en cualquier momento en Ajustes → Privacidad y datos, <strong>sin eliminar tu cuenta</strong>. Ver apartado 11.</li>
+    <li>También puedes retirar tu consentimiento en cualquier momento eliminando tu cuenta, lo que provoca el borrado de todos tus datos.</li>
   </ul>
 
   <h2>3. Para qué usamos tus datos (finalidad)</h2>
@@ -101,7 +102,7 @@
     <thead><tr><th>Proveedor</th><th>Función</th><th>Ubicación</th></tr></thead>
     <tbody>
       <tr><td><strong>Supabase, Inc.</strong></td><td>Autenticación, base de datos (Postgres), almacenamiento, funciones edge</td><td>EE. UU. (región us-east-1) con SCC firmadas</td></tr>
-      <tr><td><strong>OpenRouter, Inc.</strong></td><td>Pasarela a modelos de IA (Google Gemini, Moonshot Kimi, etc.) para chat, transcripción, OCR, identificación de pastillas, detección de patrones</td><td>EE. UU. con SCC firmadas. Configuramos los modelos para que NO usen tus datos en entrenamiento.</td></tr>
+      <tr><td><strong>OpenRouter, Inc.</strong></td><td>Pasarela a modelos de IA (Google Gemini, Moonshot Kimi, etc.) para las funciones de IA que permitas: chat con el asistente, dictado por voz, fotos de pastillas y recetas, información e interacciones de medicamentos, sugerencias del día, detección de patrones y resúmenes del informe. Consulta el apartado 11 para ver qué envía cada una.</td><td>EE. UU. con SCC firmadas. Configuramos los modelos para que NO usen tus datos en entrenamiento.</td></tr>
       <tr><td><strong>Resend, Inc.</strong></td><td>Envío del email de invitación a cuidador</td><td>EE. UU. con SCC firmadas</td></tr>
       <tr><td><strong>Expo, Inc.</strong></td><td>Servicio de notificaciones push (Expo Push API → APNs/FCM)</td><td>EE. UU.</td></tr>
       <tr><td><strong>Apple Inc.</strong></td><td>Distribución vía App Store, procesamiento de pagos in-app, Apple Health (opcional)</td><td>EE. UU. con SCC firmadas</td></tr>
@@ -162,6 +163,26 @@
 
   <h2>11. Inteligencia artificial</h2>
   <p>Vital usa modelos de IA proporcionados por OpenRouter, que enruta a modelos como Google Gemini, Moonshot Kimi K2 u otros. Los datos que envías al asistente (texto, audio, fotos) se procesan en tiempo real para generar la respuesta y <strong>no se usan para entrenar modelos</strong>, según los acuerdos vigentes con OpenRouter y las políticas de los modelos seleccionados.</p>
+  <h3>11.1 Tu permiso</h3>
+  <p>Las funciones de IA envían parte de tu información a servicios de IA de otras empresas. <strong>Hasta que las permitas, no se envía nada y las funciones de IA permanecen desactivadas.</strong></p>
+  <ul>
+    <li><strong>Es tu consentimiento explícito, independiente de esta política.</strong> Lo das dentro de la app, en su propio aviso, antes de que se ejecute la primera función de IA. Un solo permiso cubre todas las funciones de IA. Aceptar esta política no lo concede.</li>
+    <li><strong>Queda registrado.</strong> Guardamos cada decisión (permitida o desactivada) con su fecha y la versión de la explicación que se te mostró.</li>
+    <li><strong>Puedes retirarlo en cualquier momento</strong> en Ajustes → Privacidad y datos, <strong>sin eliminar tu cuenta</strong>. Desde ese momento no se envía nada más. Retirarlo no puede deshacer lo que ya se procesó.</li>
+  </ul>
+
+  <h3>11.2 Qué envía cada función de IA</h3>
+  <p>Una vez que has permitido las funciones de IA, estas son las funciones que envían información a OpenRouter y lo que envía cada una. Algunas se ejecutan solas; las demás, cuando las usas.</p>
+  <ul>
+    <li><strong>Chat con el asistente.</strong> Lo que escribes al asistente y los últimos mensajes de la conversación (hasta 30), incluidas las confirmaciones de lo que el asistente registra por ti. Se ejecuta cuando envías un mensaje.</li>
+    <li><strong>Dictado por voz.</strong> La grabación de tu voz, para convertirla en texto. Se ejecuta cuando dictas con el micrófono.</li>
+    <li><strong>Fotos de pastillas y recetas.</strong> La foto que haces o eliges. La foto de una receta puede mostrar tu nombre y el de tu médico. Se ejecuta cuando haces o eliges una foto para identificar una pastilla o leer una receta.</li>
+    <li><strong>Información e interacciones de medicamentos.</strong> El nombre del medicamento que consultas, o los nombres de tus medicamentos en una revisión de interacciones. No se envían las dosis ni otros detalles. Se ejecutan cuando abres la información de un medicamento o la revisión de interacciones, y la revisión de interacciones también se ejecuta sola al guardar un medicamento nuevo, para compararlo con los demás.</li>
+    <li><strong>Sugerencias del día.</strong> Una instantánea de tu día: cuántas de las tomas de hoy están tomadas, saltadas, no tomadas o pendientes; el ánimo de hoy; si anotaste dolor hoy; tu adherencia de los últimos 7 días; y los síntomas y el dolor que anotaste en los últimos 3 días. Se ejecuta sola al abrir Vital.</li>
+    <li><strong>Detección de patrones.</strong> Tus medicamentos guardados (nombre, dosis y fecha de inicio) y, de los últimos 30 días, el estado de cada toma programada, tus síntomas, tus anotaciones de dolor, tus registros de ánimo, estrés y energía, y las mediciones manuales como la presión arterial o la glucosa. Se ejecuta sola, en segundo plano, después de guardar un medicamento o una medición, o cuando el asistente registra por ti un medicamento, un síntoma, un dolor o una medición, y cuando la pides desde la pestaña Salud.</li>
+    <li><strong>Resumen del informe.</strong> Del informe médico de los últimos 30 días: cifras de adherencia, tus medicamentos (nombre, dosis y horas del día), síntomas y dolor con sus fechas, y tu ánimo medio. Antes de enviar los datos, nuestro servidor conserva solo estos campos, de modo que tu nombre, tu email y el identificador de tu cuenta quedan fuera. Se ejecuta sola al abrir el informe médico.</li>
+  </ul>
+
   <p>Las respuestas de la IA <strong>pueden contener errores</strong> y nunca constituyen consejo médico. Lee el <a href="./medical-disclaimer.html">Aviso médico</a> completo.</p>
 
   <h2>12. Cambios en esta política</h2>
