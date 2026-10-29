@@ -34,7 +34,7 @@
   <nav><a href="./index.html">← Legal Information</a></nav>
   <h1>Privacy Policy</h1>
   <p class="meta">
-    Last updated: October 22, 2026<br>
+    Last updated: October 29, 2026<br>
     Data controller: IFA- TECH LLC<br>
     Address: 7950 NW 53rd St, Suite 342, Doral, FL 33166, USA<br>
     Privacy contact: <a href="mailto:vital-app@ifa-tech.com">vital-app@ifa-tech.com</a>
@@ -50,17 +50,17 @@
   <h3>1.1 Data you provide directly</h3>
   <ul>
     <li><strong>Account:</strong> email, password (encrypted with bcrypt), preferred language.</li>
-    <li><strong>Profile:</strong> name, year of birth, sex, weight, height, blood type, allergies, chronic conditions, emergency contact.</li>
+    <li><strong>Profile:</strong> name, phone number (optional; your caregivers see it), year of birth, sex, weight, height, blood type, allergies, chronic conditions, emergency contact.</li>
     <li><strong>Medications:</strong> name, dose, schedule, instructions, stock, pill photo, prescription photo.</li>
-    <li><strong>Health journal:</strong> mood, meals, symptoms, pain, vital measurements (blood pressure, glucose, weight, temperature, heart rate, oxygen saturation).</li>
+    <li><strong>Health journal:</strong> mood, meals, symptoms, vital measurements (blood pressure, glucose, weight, temperature, heart rate, oxygen saturation) and what you note on the body: pain, skin spots, burns, bruises, wounds, fractures, swelling or itching, with the exact spot you mark on the figure, your answers and your notes.</li>
     <li><strong>Conversations with the assistant:</strong> text and (transcribed) audio.</li>
     <li><strong>Medical appointments:</strong> doctor, specialty, date, location, notes.</li>
-    <li><strong>Caregivers:</strong> the emails of people you invite, and the permissions you grant them.</li>
+    <li><strong>Caregivers:</strong> the emails of people you invite, the permissions you grant them, and the medications they add to your list (with who added them).</li>
   </ul>
 
   <h3>1.2 Data we collect automatically</h3>
   <ul>
-    <li><strong>Device identifier:</strong> push notification token (Apple/Google) — not the device's hardware ID.</li>
+    <li><strong>Device identifier:</strong> push notification token (Apple/Google), registered to your account on this phone with the language of the notification texts — not the device's hardware ID. If another account signs in on the phone, the token moves to that account.</li>
     <li><strong>App and system version:</strong> for technical support.</li>
     <li><strong>System language</strong> (so we can show you the UI in your language).</li>
   </ul>
@@ -107,16 +107,24 @@
     </tbody>
   </table>
 
+  <h3>3.1 Your caregivers</h3>
+  <p>A caregiver is someone you invite. They see only what you allow, section by section, and you can change it at any time for each caregiver in Caregiver → Your caregivers → Permissions, or take their access away altogether («Remove access»). The invitation goes out with every section allowed: uncheck what you do not want to share before sending it.</p>
+  <ul>
+    <li><strong>What they can see, if you allow it:</strong> your medications and each day's doses (taken, late, not taken or pending), the dose history and your adherence; your measurements; your meals; your mood; your symptoms, pain and what you note on the body; your upcoming medical appointments; and your medical report with those same sections (without the AI summary). If you add your phone number to your profile, they see it, to call you or write to you on WhatsApp.</li>
+    <li><strong>What they can do, if you allow it:</strong> add medications to your list (they cannot change or delete anything). We tell you with a notification («Ana added a medication to your list»); its reminders start ringing on your phone once you open Vital, and its doses count from then on.</li>
+    <li><strong>What they are told:</strong> a notification for each dose you take (they can turn these off) and for each dose you do not take: skipped, or not marked 2 hours after its time. After 2 days with no dose recorded, one notice instead of one per dose. The notification says who and what happened («María didn't take a dose»), never the medication or the dose; the details are in the app.</li>
+  </ul>
+
   <h2>4. Who we share your data with (subprocessors)</h2>
   <p>To operate Vital we use the following providers. All are bound by a Data Processing Agreement (DPA) and apply appropriate technical and organizational measures.</p>
   <table>
     <thead><tr><th>Provider</th><th>Function</th><th>Location</th></tr></thead>
     <tbody>
       <tr><td><strong>Supabase, Inc.</strong></td><td>Authentication, Postgres database, storage, edge functions</td><td>USA (us-east-1 region) with signed SCCs</td></tr>
-      <tr><td><strong>OpenRouter, Inc.</strong></td><td>Gateway to AI models (Google Gemini, Moonshot Kimi, etc.) for the AI features you allow: assistant chat, voice dictation, pill and prescription photos, medication information and interaction checks, daily suggestions, pattern detection and report summaries. See Section 11 for what each one sends.</td><td>USA with signed SCCs. We configure the models so they do NOT use your data for training.</td></tr>
+      <tr><td><strong>OpenRouter, Inc.</strong></td><td>Gateway to AI models (Google Gemini, Moonshot Kimi, etc.) for the AI features you allow: assistant chat (with the photos you send it), voice dictation, pill and prescription photos, medication information and interaction checks, daily suggestions, pattern detection and report summaries. See Section 11 for what each one sends.</td><td>USA with signed SCCs. We configure the models so they do NOT use your data for training.</td></tr>
       <tr><td><strong>Resend, Inc.</strong></td><td>Sending the caregiver invitation email</td><td>USA with signed SCCs</td></tr>
-      <tr><td><strong>Expo, Inc.</strong></td><td>Push notification service (Expo Push API → APNs/FCM)</td><td>USA</td></tr>
-      <tr><td><strong>Apple Inc.</strong></td><td>Distribution via the App Store</td><td>USA with signed SCCs</td></tr>
+      <tr><td><strong>Expo, Inc.</strong></td><td>Push notification service (Expo Push API → APNs/FCM). The notification it carries says who and what happened (for example «María didn't take a dose»), never a medication or a dose.</td><td>USA</td></tr>
+      <tr><td><strong>Apple Inc.</strong></td><td>Distribution via the App Store, and delivery of push notifications (APNs)</td><td>USA with signed SCCs</td></tr>
       <tr><td><strong>Google LLC</strong></td><td>Distribution via Play Store</td><td>USA with signed SCCs</td></tr>
     </tbody>
   </table>
@@ -201,10 +209,10 @@
   <h3>11.2 What each AI feature sends</h3>
   <p>Once you have allowed AI features, these are the features that send information to OpenRouter, and what each one sends. Some run by themselves; the rest run when you use them.</p>
   <ul>
-    <li><strong>Assistant chat.</strong> What you type to the assistant and the recent messages of the conversation (up to the last 30), including the confirmations of anything the assistant records for you. It runs when you send a message.</li>
+    <li><strong>Assistant chat.</strong> What you type or say to the assistant, the photo you send it if you add one (for example of a medication, your skin, a wound or a meal), and the recent messages of the conversation (up to the last 30), including the confirmations of anything the assistant records for you. A photo goes with its own message only and Vital does not store it; earlier messages mention it only with the word “[foto]”. It runs when you send a message.</li>
     <li><strong>Voice dictation.</strong> The recording of your voice, to turn it into text. It runs when you dictate with the microphone.</li>
     <li><strong>Pill and prescription photos.</strong> The photo you take or choose. A prescription photo can show your name and your doctor's. It runs when you take or choose a photo to identify a pill or read a prescription.</li>
-    <li><strong>Medication information and interaction checks.</strong> The name of the medication you look up, or the names of your medications for an interaction check. Doses and other details are not sent. They run when you open a medication's information or the interaction check, and an interaction check also runs by itself when you save a new medication, to compare it with your others.</li>
+    <li><strong>Medication information and interaction checks.</strong> The name of the medication you look up, or the names of your medications for an interaction check. Doses and other details are not sent. They run when you open a medication's information or the interaction check, and an interaction check also runs by itself when you save a new medication, to compare it with your others. When a caregiver you allowed adds a medication to your list, the check runs on their phone with the names of your medications, only if you have allowed AI features (and so have they).</li>
     <li><strong>Daily suggestions.</strong> A snapshot of your day: how many of today's doses were taken, skipped, missed or are still pending; today's mood; whether you logged pain today; your adherence over the last 7 days; and the symptoms and pain you logged in the last 3 days. It runs by itself when you open Vital.</li>
     <li><strong>Pattern detection.</strong> Your saved medications (name, dose and start date) and, for the last 30 days, the status of each scheduled dose, your symptoms, pain entries, mood, stress and energy check-ins, and manual measurements such as blood pressure or glucose. It runs by itself in the background after you save a medication or a measurement, or when the assistant records a medication, symptom, pain entry or measurement for you, and whenever you ask for it from the Health tab.</li>
     <li><strong>Report summary.</strong> From the medical report for the last 30 days: adherence figures, your medications (name, dose and times of day), symptoms and pain entries with their dates, and your average mood. Before the data is sent on, our server keeps only these fields, so your name, email and account ID are left out. It runs by itself when you open the medical report.</li>

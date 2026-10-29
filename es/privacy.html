@@ -35,7 +35,7 @@
   <nav><a href="./index.html">← Información legal</a></nav>
   <h1>Política de privacidad</h1>
   <p class="meta">
-    Última actualización: <span class="placeholder">22 de octubre de 2026</span><br>
+    Última actualización: <span class="placeholder">29 de octubre de 2026</span><br>
     Responsable del tratamiento: <span class="placeholder">IFA- TECH LLC</span><br>
     Dirección: <span class="placeholder">7950 NW 53rd St, Suite 342, Doral, FL 33166, USA</span><br>
     Contacto DPO/Privacidad: <a href="mailto:vital-app@ifa-tech.com"><span class="placeholder">vital-app@ifa-tech.com</span></a>
@@ -51,17 +51,17 @@
   <h3>1.1 Datos que tú proporcionas directamente</h3>
   <ul>
     <li><strong>Cuenta:</strong> email, contraseña (cifrada con bcrypt), idioma preferido.</li>
-    <li><strong>Perfil:</strong> nombre, año de nacimiento, sexo, peso, altura, tipo de sangre, alergias, condiciones crónicas, contacto de emergencia.</li>
+    <li><strong>Perfil:</strong> nombre, teléfono (opcional; lo ven tus cuidadores), año de nacimiento, sexo, peso, altura, tipo de sangre, alergias, condiciones crónicas, contacto de emergencia.</li>
     <li><strong>Medicamentos:</strong> nombre, dosis, horarios, instrucciones, stock, foto de pastilla, foto de receta.</li>
-    <li><strong>Diario de salud:</strong> estado de ánimo, comidas, síntomas, dolor, mediciones vitales (tensión, glucosa, peso, temperatura, pulso, oxígeno).</li>
+    <li><strong>Diario de salud:</strong> estado de ánimo, comidas, síntomas, mediciones vitales (tensión, glucosa, peso, temperatura, pulso, oxígeno) y lo que anotas en el cuerpo: dolor, manchas en la piel, quemaduras, golpes, heridas, fracturas, hinchazón o picor, con el sitio exacto que marcas en la silueta, tus respuestas y tus notas.</li>
     <li><strong>Conversaciones con el asistente:</strong> texto y audio (transcrito).</li>
     <li><strong>Citas médicas:</strong> doctor, especialidad, fecha, ubicación, notas.</li>
-    <li><strong>Cuidadores:</strong> emails de personas a las que invitas, permisos que les concedes.</li>
+    <li><strong>Cuidadores:</strong> emails de personas a las que invitas, permisos que les concedes y los medicamentos que añaden a tu lista (con quién los añadió).</li>
   </ul>
 
   <h3>1.2 Datos que recogemos automáticamente</h3>
   <ul>
-    <li><strong>Identificador de dispositivo:</strong> token de notificaciones push (Apple/Google), no es el ID del dispositivo.</li>
+    <li><strong>Identificador de dispositivo:</strong> token de notificaciones push (Apple/Google), registrado a tu cuenta en este teléfono con el idioma de los textos de las notificaciones; no es el ID del dispositivo. Si otra cuenta entra en el teléfono, el token pasa a esa cuenta.</li>
     <li><strong>Versión de app y sistema:</strong> para soporte técnico.</li>
     <li><strong>Idioma del sistema</strong> (para mostrarte la UI en tu idioma).</li>
   </ul>
@@ -108,16 +108,24 @@
     </tbody>
   </table>
 
+  <h3>3.1 Tus cuidadores</h3>
+  <p>Un cuidador es alguien a quien invitas. Solo ve lo que le permites, sección por sección, y puedes cambiarlo cuando quieras para cada cuidador en Cuidador → Tus cuidadores → Permisos, o quitarle el acceso del todo («Quitar acceso»). La invitación sale con todas las secciones permitidas: desmarca lo que no quieras compartir antes de enviarla.</p>
+  <ul>
+    <li><strong>Qué puede ver, si se lo permites:</strong> tus medicamentos y las tomas de cada día (tomadas, tardías, no tomadas o pendientes), el historial de tomas y tu adherencia; tus mediciones; tus comidas; tu ánimo; tus síntomas, dolor y lo que anotas en el cuerpo; tus próximas citas médicas; y tu informe médico con esas mismas secciones (sin el resumen de la IA). Si añades tu teléfono a tu perfil, lo ve, para llamarte o escribirte por WhatsApp.</li>
+    <li><strong>Qué puede hacer, si se lo permites:</strong> añadir medicamentos a tu lista (no puede cambiar ni borrar nada). Te avisamos con una notificación («Ana añadió un medicamento a tu lista»); sus recordatorios empiezan a sonar en tu teléfono cuando abres Vital y sus tomas cuentan desde entonces.</li>
+    <li><strong>De qué se le avisa:</strong> una notificación por cada toma que tomas (puede desactivarlas) y por cada toma que no tomas: saltada, o sin marcar 2 horas después de su hora. Tras 2 días sin ninguna toma registrada, un solo aviso en vez de uno por toma. La notificación dice quién y qué pasó («María no tomó una dosis»), nunca el medicamento ni la dosis; el detalle está en la app.</li>
+  </ul>
+
   <h2>4. Con quién compartimos tus datos (subprocesadores)</h2>
   <p>Para operar Vital usamos los siguientes proveedores. Todos están sujetos a un Acuerdo de Tratamiento de Datos (DPA) y aplican medidas técnicas y organizativas adecuadas.</p>
   <table>
     <thead><tr><th>Proveedor</th><th>Función</th><th>Ubicación</th></tr></thead>
     <tbody>
       <tr><td><strong>Supabase, Inc.</strong></td><td>Autenticación, base de datos (Postgres), almacenamiento, funciones edge</td><td>EE. UU. (región us-east-1) con SCC firmadas</td></tr>
-      <tr><td><strong>OpenRouter, Inc.</strong></td><td>Pasarela a modelos de IA (Google Gemini, Moonshot Kimi, etc.) para las funciones de IA que permitas: chat con el asistente, dictado por voz, fotos de pastillas y recetas, información e interacciones de medicamentos, sugerencias del día, detección de patrones y resúmenes del informe. Consulta el apartado 11 para ver qué envía cada una.</td><td>EE. UU. con SCC firmadas. Configuramos los modelos para que NO usen tus datos en entrenamiento.</td></tr>
+      <tr><td><strong>OpenRouter, Inc.</strong></td><td>Pasarela a modelos de IA (Google Gemini, Moonshot Kimi, etc.) para las funciones de IA que permitas: chat con el asistente (con las fotos que le envías), dictado por voz, fotos de pastillas y recetas, información e interacciones de medicamentos, sugerencias del día, detección de patrones y resúmenes del informe. Consulta el apartado 11 para ver qué envía cada una.</td><td>EE. UU. con SCC firmadas. Configuramos los modelos para que NO usen tus datos en entrenamiento.</td></tr>
       <tr><td><strong>Resend, Inc.</strong></td><td>Envío del email de invitación a cuidador</td><td>EE. UU. con SCC firmadas</td></tr>
-      <tr><td><strong>Expo, Inc.</strong></td><td>Servicio de notificaciones push (Expo Push API → APNs/FCM)</td><td>EE. UU.</td></tr>
-      <tr><td><strong>Apple Inc.</strong></td><td>Distribución vía App Store</td><td>EE. UU. con SCC firmadas</td></tr>
+      <tr><td><strong>Expo, Inc.</strong></td><td>Servicio de notificaciones push (Expo Push API → APNs/FCM). La notificación que lleva dice quién y qué pasó (por ejemplo «María no tomó una dosis»), nunca un medicamento ni una dosis.</td><td>EE. UU.</td></tr>
+      <tr><td><strong>Apple Inc.</strong></td><td>Distribución vía App Store y entrega de notificaciones push (APNs)</td><td>EE. UU. con SCC firmadas</td></tr>
       <tr><td><strong>Google LLC</strong></td><td>Distribución vía Play Store</td><td>EE. UU. con SCC firmadas</td></tr>
     </tbody>
   </table>
@@ -189,10 +197,10 @@
   <h3>11.2 Qué envía cada función de IA</h3>
   <p>Una vez que has permitido las funciones de IA, estas son las funciones que envían información a OpenRouter y lo que envía cada una. Algunas se ejecutan solas; las demás, cuando las usas.</p>
   <ul>
-    <li><strong>Chat con el asistente.</strong> Lo que escribes al asistente y los últimos mensajes de la conversación (hasta 30), incluidas las confirmaciones de lo que el asistente registra por ti. Se ejecuta cuando envías un mensaje.</li>
+    <li><strong>Chat con el asistente.</strong> Lo que escribes o dices al asistente, la foto que le envías si añades una (por ejemplo de un medicamento, la piel, una herida o una comida) y los últimos mensajes de la conversación (hasta 30), incluidas las confirmaciones de lo que el asistente registra por ti. Una foto va solo con su mensaje y Vital no la guarda; los mensajes anteriores solo la mencionan como «[foto]». Se ejecuta cuando envías un mensaje.</li>
     <li><strong>Dictado por voz.</strong> La grabación de tu voz, para convertirla en texto. Se ejecuta cuando dictas con el micrófono.</li>
     <li><strong>Fotos de pastillas y recetas.</strong> La foto que haces o eliges. La foto de una receta puede mostrar tu nombre y el de tu médico. Se ejecuta cuando haces o eliges una foto para identificar una pastilla o leer una receta.</li>
-    <li><strong>Información e interacciones de medicamentos.</strong> El nombre del medicamento que consultas, o los nombres de tus medicamentos en una revisión de interacciones. No se envían las dosis ni otros detalles. Se ejecutan cuando abres la información de un medicamento o la revisión de interacciones, y la revisión de interacciones también se ejecuta sola al guardar un medicamento nuevo, para compararlo con los demás.</li>
+    <li><strong>Información e interacciones de medicamentos.</strong> El nombre del medicamento que consultas, o los nombres de tus medicamentos en una revisión de interacciones. No se envían las dosis ni otros detalles. Se ejecutan cuando abres la información de un medicamento o la revisión de interacciones, y la revisión de interacciones también se ejecuta sola al guardar un medicamento nuevo, para compararlo con los demás. Cuando un cuidador al que se lo permites añade un medicamento a tu lista, la revisión se ejecuta en su teléfono con los nombres de tus medicamentos, solo si tú has permitido las funciones de IA (y esa persona también).</li>
     <li><strong>Sugerencias del día.</strong> Una instantánea de tu día: cuántas de las tomas de hoy están tomadas, saltadas, no tomadas o pendientes; el ánimo de hoy; si anotaste dolor hoy; tu adherencia de los últimos 7 días; y los síntomas y el dolor que anotaste en los últimos 3 días. Se ejecuta sola al abrir Vital.</li>
     <li><strong>Detección de patrones.</strong> Tus medicamentos guardados (nombre, dosis y fecha de inicio) y, de los últimos 30 días, el estado de cada toma programada, tus síntomas, tus anotaciones de dolor, tus registros de ánimo, estrés y energía, y las mediciones manuales como la presión arterial o la glucosa. Se ejecuta sola, en segundo plano, después de guardar un medicamento o una medición, o cuando el asistente registra por ti un medicamento, un síntoma, un dolor o una medición, y cuando la pides desde la pestaña Salud.</li>
     <li><strong>Resumen del informe.</strong> Del informe médico de los últimos 30 días: cifras de adherencia, tus medicamentos (nombre, dosis y horas del día), síntomas y dolor con sus fechas, y tu ánimo medio. Antes de enviar los datos, nuestro servidor conserva solo estos campos, de modo que tu nombre, tu email y el identificador de tu cuenta quedan fuera. Se ejecuta sola al abrir el informe médico.</li>
