@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Vital — Email confirmed</title>
+  <style>
+    body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 48px 24px; text-align: center; color: #0F172A; background: #F4F6F8; }
+    h1 { font-size: 24px; margin: 16px 0 8px; }
+    p { margin: 0 0 24px; color: #334155; }
+    hr { border: 0; border-top: 1px solid #E2E8F0; margin: 32px auto; max-width: 320px; }
+  </style>
+</head>
+<body>
+  <!-- Supabase Auth's Site URL: where the confirmation email's link lands (QA, 2026-10-29: it
+       landed on localhost:3000, an error page). The link's tokens come in the #fragment, which no
+       server sees; the script drops it from the address bar. -->
+  <div style="font-size:48px">✅</div>
+  <div id="en">
+    <h1>Email confirmed</h1>
+    <p>Go back to the Vital app to continue.</p>
+  </div>
+  <hr>
+  <div id="es" lang="es">
+    <h1>Email confirmado</h1>
+    <p>Vuelve a la app Vital para continuar.</p>
+  </div>
+  <script>
+    if (location.hash) history.replaceState(null, '', location.pathname);
+    // The phone's language first (QA, 2026-10-29: a Spanish phone read the English first).
+    if ((navigator.language || '').toLowerCase().startsWith('es')) {
+      var en = document.getElementById('en'), es = document.getElementById('es');
+      en.parentNode.insertBefore(es, en);
+      document.documentElement.lang = 'es';
+    }
+  </script>
+</body>
+</html>
