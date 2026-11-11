@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>Vital — Email confirmed</title>
+  <title>Vital — Email confirmation</title>
   <style>
     body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 48px 24px; text-align: center; color: #0F172A; background: #F4F6F8; }
     h1 { font-size: 24px; margin: 16px 0 8px; }
@@ -14,25 +14,55 @@
 </head>
 <body>
   <!-- Supabase Auth's Site URL: where the confirmation email's link lands (QA, 2026-10-29: it
-       landed on localhost:3000, an error page). The link's tokens come in the #fragment, which no
-       server sees; the script drops it from the address bar. -->
-  <div style="font-size:48px">✅</div>
+       landed on localhost:3000, an error page). A link that worked brings the session in the
+       #fragment (or a ?code=); one that expired or was already used brings an error there
+       instead (legal review R6-20, 2026-10-30: the page said "Email confirmed" either way).
+       No server sees the #fragment; the script reads the address, then drops it from the
+       address bar. With neither, or without JavaScript, the page only says to go back to the app. -->
+  <div id="icon" style="font-size:48px">📱</div>
   <div id="en">
-    <h1>Email confirmed</h1>
-    <p>Go back to the Vital app to continue.</p>
+    <h1 id="en-title">Go back to Vital</h1>
+    <p id="en-body">Return to the Vital app to continue.</p>
   </div>
   <hr>
   <div id="es" lang="es">
-    <h1>Email confirmado</h1>
-    <p>Vuelve a la app Vital para continuar.</p>
+    <h1 id="es-title">Vuelve a Vital</h1>
+    <p id="es-body">Vuelve a la app Vital para continuar.</p>
   </div>
   <script>
-    if (location.hash) history.replaceState(null, '', location.pathname);
+    var params = new URLSearchParams(location.hash.slice(1));
+    new URLSearchParams(location.search).forEach(function (value, key) { params.append(key, value); });
+    var state = params.has('error') || params.has('error_code') ? 'failed'
+      : params.has('access_token') || params.has('code') ? 'confirmed'
+      : null;
+    if (location.hash || location.search) history.replaceState(null, '', location.pathname);
+    var TEXT = {
+      confirmed: {
+        icon: '✅',
+        en: ['Email confirmed', 'Go back to the Vital app to continue.'],
+        es: ['Email confirmado', 'Vuelve a la app Vital para continuar.']
+      },
+      failed: {
+        icon: '⚠️',
+        en: ['This link didn’t work', 'It may have expired or been used already. Go back to Vital and enter the 6-digit code from the email, or ask for a new one.'],
+        es: ['Este enlace no funcionó', 'Puede que haya caducado o que ya se haya usado. Vuelve a Vital y escribe el código de 6 cifras del email, o pide uno nuevo.']
+      }
+    };
+    if (state) {
+      var text = TEXT[state];
+      document.getElementById('icon').textContent = text.icon;
+      document.getElementById('en-title').textContent = text.en[0];
+      document.getElementById('en-body').textContent = text.en[1];
+      document.getElementById('es-title').textContent = text.es[0];
+      document.getElementById('es-body').textContent = text.es[1];
+      document.title = 'Vital — ' + text.en[0];
+    }
     // The phone's language first (QA, 2026-10-29: a Spanish phone read the English first).
     if ((navigator.language || '').toLowerCase().startsWith('es')) {
       var en = document.getElementById('en'), es = document.getElementById('es');
       en.parentNode.insertBefore(es, en);
       document.documentElement.lang = 'es';
+      if (state) document.title = 'Vital — ' + TEXT[state].es[0];
     }
   </script>
 </body>

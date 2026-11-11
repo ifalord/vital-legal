@@ -24,7 +24,6 @@
     th, td { text-align: left; padding: 10px 12px; border: 1px solid #E5E7EB; vertical-align: top; }
     th { background: #F1F5F9; font-weight: 600; }
     .meta { color: #64748B; font-size: 13px; margin-bottom: 32px; padding-bottom: 16px; border-bottom: 1px solid #E5E7EB; }
-    .placeholder { background: #FEF3C7; color: #92400E; padding: 1px 6px; border-radius: 3px; font-weight: 600; }
     .key { background: #ECFEFF; border-left: 3px solid #0E7490; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0; }
     a { color: #0E7490; }
     nav { margin-bottom: 24px; }
@@ -35,35 +34,39 @@
   <nav><a href="./index.html">← Información legal</a></nav>
   <h1>Política de privacidad</h1>
   <p class="meta">
-    Última actualización: <span class="placeholder">29 de octubre de 2026</span><br>
-    Responsable del tratamiento: <span class="placeholder">IFA- TECH LLC</span><br>
-    Dirección: <span class="placeholder">7950 NW 53rd St, Suite 342, Doral, FL 33166, USA</span><br>
-    Contacto DPO/Privacidad: <a href="mailto:vital-app@ifa-tech.com"><span class="placeholder">vital-app@ifa-tech.com</span></a>
+    Última actualización: 11 de noviembre de 2026<br>
+    Responsable del tratamiento: IFA- TECH LLC<br>
+    Dirección: 7950 NW 53rd St, Suite 342, Doral, FL 33166, EE. UU.<br>
+    Contacto de privacidad: <a href="mailto:vital-app@ifa-tech.com">vital-app@ifa-tech.com</a>
   </p>
 
   <div class="key">
-    <strong>Resumen humano (no sustituye al texto completo):</strong><br>
-    Recogemos los datos que tú decides darnos para que la app funcione. Tus datos médicos son tuyos. Nunca los vendemos. Los compartimos sólo con los proveedores técnicos que necesitamos para operar (Supabase, OpenRouter, Apple, Google). Puedes exportarlos o borrarlos cuando quieras desde Ajustes → Privacidad y datos. Las funciones de IA, que envían algunos de tus registros a servicios de IA, están desactivadas hasta que las permitas dentro de la app, y puedes apagarlas cuando quieras sin eliminar tu cuenta.
+    <strong>Resumen en lenguaje sencillo (no sustituye al texto completo):</strong><br>
+    Recogemos los datos que tú decides darnos y algunos datos técnicos que la app necesita para funcionar (apartado 1.2). Tus datos de salud son tuyos. Nunca los vendemos. Los compartimos solo con los proveedores técnicos que necesitamos para operar (Supabase; OpenRouter y Google para la IA; Expo, Resend y Apple), con los cuidadores que invitas y apruebas y, cuando la ley lo exige, con las autoridades. Puedes descargarlos o borrarlos cuando quieras desde Ajustes → Privacidad y datos. Las funciones de IA, que envían algunos de tus registros a servicios de IA, están desactivadas hasta que las permitas dentro de la app, y puedes apagarlas cuando quieras sin eliminar tu cuenta.
   </div>
+
+  <p><strong>Dónde se ofrece Vital.</strong> Vital se ofrece en Estados Unidos. No está dirigida a quienes viven en la Unión Europea, el Espacio Económico Europeo, el Reino Unido o Suiza; si vives allí, no crees una cuenta.</p>
+  <p><strong>Si vives en Washington o Nevada:</strong> consulta también nuestra <a href="./consumer-health-data.html">Política de privacidad de datos de salud del consumidor</a>.</p>
 
   <h2>1. Qué datos recogemos</h2>
 
   <h3>1.1 Datos que tú proporcionas directamente</h3>
   <ul>
-    <li><strong>Cuenta:</strong> email, contraseña (cifrada con bcrypt), idioma preferido.</li>
-    <li><strong>Perfil:</strong> nombre, teléfono (opcional; lo ven tus cuidadores), año de nacimiento, sexo, peso, altura, tipo de sangre, alergias, condiciones crónicas, contacto de emergencia.</li>
-    <li><strong>Medicamentos:</strong> nombre, dosis, horarios, instrucciones, stock, foto de pastilla, foto de receta.</li>
+    <li><strong>Cuenta:</strong> email, contraseña (solo guardamos su hash bcrypt, nunca la contraseña), idioma preferido. Si en su lugar entras con Apple, Apple da a Vital un identificador de tu cuenta, tu email o, si eliges ocultarlo, una dirección privada de reenvío que Apple crea para Vital, y, solo la primera vez, tu nombre. Vital nunca recibe la contraseña de tu Apple ID, y esa cuenta no tiene contraseña de Vital.</li>
+    <li><strong>Perfil:</strong> nombre, teléfono (opcional), año de nacimiento, sexo, peso, altura, tipo de sangre, alergias, enfermedades crónicas, contacto de emergencia. El apartado 3.1 dice qué pueden ver tus cuidadores.</li>
+    <li><strong>Medicamentos:</strong> nombre, dosis, horarios, instrucciones y stock y, si abres la información de un medicamento, el texto que escribió la IA sobre él. La foto que haces o eliges para identificar una pastilla o leer una receta se envía a las funciones de IA que permitas (apartado 11) y no se guarda en nuestros servidores.</li>
     <li><strong>Diario de salud:</strong> estado de ánimo, comidas, síntomas, mediciones vitales (tensión, glucosa, peso, temperatura, pulso, oxígeno) y lo que anotas en el cuerpo: dolor, manchas en la piel, quemaduras, golpes, heridas, fracturas, hinchazón o picor, con el sitio exacto que marcas en la silueta, tus respuestas y tus notas.</li>
-    <li><strong>Conversaciones con el asistente:</strong> texto y audio (transcrito).</li>
-    <li><strong>Citas médicas:</strong> doctor, especialidad, fecha, ubicación, notas.</li>
-    <li><strong>Cuidadores:</strong> emails de personas a las que invitas, permisos que les concedes y los medicamentos que añaden a tu lista (con quién los añadió).</li>
+    <li><strong>Conversaciones con el asistente:</strong> lo que escribes o dictas y las fotos que envías. Vital no guarda la conversación: se queda en la app mientras está abierta. Lo que el asistente te propone registrar (un medicamento, un síntoma…) se guarda, como cualquier otro registro, solo cuando tocas «Guardar» en su tarjeta; si tu app aún no se ha actualizado para mostrar ese botón, sus propuestas esperan en nuestro servidor 30 minutos (apartado 11.2).</li>
+    <li><strong>Citas médicas:</strong> médico o centro, especialidad, fecha y hora, lugar, notas.</li>
+    <li><strong>Cuidadores:</strong> los emails de las personas a las que invitas, la relación que indicas, los permisos que les concedes, los medicamentos que proponen para tu lista (con quién los propuso y si los añadiste), los avisos que Vital les envía sobre tus tomas y los comentarios escritos en esos avisos.</li>
   </ul>
 
   <h3>1.2 Datos que recogemos automáticamente</h3>
   <ul>
-    <li><strong>Identificador de dispositivo:</strong> token de notificaciones push (Apple/Google), registrado a tu cuenta en este teléfono con el idioma de los textos de las notificaciones; no es el ID del dispositivo. Si otra cuenta entra en el teléfono, el token pasa a esa cuenta.</li>
-    <li><strong>Versión de app y sistema:</strong> para soporte técnico.</li>
-    <li><strong>Idioma del sistema</strong> (para mostrarte la UI en tu idioma).</li>
+    <li><strong>Token de notificaciones push</strong> (Apple/Google), registrado a tu cuenta en este teléfono con el idioma de los textos de las notificaciones, la versión de la app, la plataforma (iOS o Android) y un identificador aleatorio de esta instalación; no es el ID del dispositivo. Si otra cuenta entra en el teléfono, el token pasa a esa cuenta.</li>
+    <li><strong>Zona horaria e idioma</strong> de tu teléfono: la zona horaria, para que nuestro servidor sepa tu día y tu hora (para registrar una toma sin marcar 2 horas después de su hora y para dar a tus cuidadores las horas de tu reloj), y el idioma, para que las notificaciones y los avisos que nuestro servidor escribe para ti lleguen en él.</li>
+    <li><strong>Datos de conexión</strong> que nuestros proveedores registran con cada petición: tu dirección IP, el tipo de dispositivo y de app (user agent) y la hora. Supabase los guarda con cada sesión mientras dura y en sus registros hasta 7 días. Cada vez que se abre, la app también pregunta a Expo si hay una actualización, lo que da a Expo estos datos, la versión de la app y un identificador aleatorio de esta instalación (apartado 4).</li>
+    <li><strong>Uso de las funciones de IA:</strong> cuántas veces llamó cada una al modelo de IA por ti en el periodo de 24 horas en curso, para aplicar el límite diario.</li>
   </ul>
 
   <h3>1.3 Datos que NO recogemos</h3>
@@ -82,140 +85,173 @@
     <li><strong>Los últimos resultados de las funciones de IA que permitas</strong>: las sugerencias del día y los patrones detectados, para que aparezcan nada más abrir la app.</li>
     <li><strong>Las calificaciones de interacciones</strong>: por cada pareja de tus medicamentos, la calificación más grave que te mostró una revisión de interacciones y su explicación, para que una revisión posterior nunca muestre esa pareja más leve; y, si marcas una pareja como consultada con tu farmacéutico, la fecha y la calificación de ese momento. También, los nombres de los medicamentos de tu lista que este teléfono da por revisados (los de la última revisión que viste terminada o, la primera vez, los que ya tenías), para revisar los que se añadan sin que su revisión termine.</li>
     <li><strong>Tu decisión sobre la IA</strong> (permitida o desactivada, con su fecha y versión), para que la app sepa al momento si puede usar las funciones de IA.</li>
+    <li><strong>La silueta que elegiste para el mapa del cuerpo</strong>, si te registraste como cuidador (o como paciente y cuidador).</li>
+    <li><strong>Una pausa de 24 horas para crear cuentas</strong>, solo si en este teléfono se escribió un año de nacimiento de menos de 14 años (apartado 9): el momento en que termina, y nada más. Termina sola.</li>
     <li><strong>Copias temporales</strong> de tu exportación de datos, del informe médico que compartes y de las fotos y grabaciones de voz que envías a las funciones de IA (una grabación se borra en cuanto se envía).</li>
-    <li><strong>Tus preferencias en este teléfono</strong>: idioma, tema y voz.</li>
+    <li><strong>Tus preferencias en este teléfono</strong>: idioma, tema y voz, y los identificadores aleatorios de esta instalación que se usan para las notificaciones y las actualizaciones de la app (apartado 1.2).</li>
   </ul>
   <p>Salvo lo que cada función envía cuando la usas (apartados 4 y 11), estos datos se quedan en tu teléfono. Vital le pide al teléfono que los deje fuera de las copias de seguridad y del paso a un teléfono nuevo (los recordatorios en sí los guarda el sistema de notificaciones del teléfono). Al cerrar sesión se borran de este teléfono los recordatorios (se vuelven a poner al entrar), los resultados de IA y la sesión; al eliminar tu cuenta, todo lo anterior salvo tus preferencias; al desinstalar la app, todo. El apartado 6 da cada plazo.</p>
 
-  <h2>2. Categorías especiales (GDPR Art. 9)</h2>
-  <p>Vital trata <strong>datos de salud</strong>, que el Reglamento General de Protección de Datos clasifica como categoría especial. Esto exige una protección reforzada. Tu base legal para el tratamiento es:</p>
+  <h2>2. Datos de salud y tu consentimiento</h2>
+  <p>Vital trata <strong>datos de salud</strong>, que la mayoría de las leyes de privacidad consideran información personal sensible y que exigen una protección reforzada. Los tratamos con tu consentimiento:</p>
   <ul>
-    <li><strong>Consentimiento explícito</strong> (art. 9.2.a GDPR), prestado al aceptar esta política durante el registro y al introducir cada dato.</li>
-    <li><strong>Para las funciones de IA, un consentimiento explícito aparte</strong>, que das dentro de la app (no al aceptar esta política) antes de que se ejecute cualquier función de IA. Queda registrado y puedes retirarlo en cualquier momento en Ajustes → Privacidad y datos, <strong>sin eliminar tu cuenta</strong>. Ver apartado 11.</li>
-    <li>También puedes retirar tu consentimiento en cualquier momento eliminando tu cuenta, lo que provoca el borrado de todos tus datos, también de lo que Vital guarda en el teléfono donde lo haces (apartado 1.4).</li>
+    <li><strong>Tu consentimiento para los datos de salud</strong>, que das en su propia casilla al crear tu cuenta, aparte de la casilla en la que aceptas los Términos y esta política. Vital no crea la cuenta sin él, porque su servicio consiste en guardar esos datos y mostrártelos. Puedes retirarlo cuando quieras eliminando tu cuenta.</li>
+    <li><strong>Para las funciones de IA, un permiso aparte</strong>, que das dentro de la app (no al aceptar esta política) antes de que se ejecute cualquier función de IA. Queda registrado y puedes retirarlo en cualquier momento en Ajustes → Privacidad y datos, <strong>sin eliminar tu cuenta</strong>. Ver apartado 11.</li>
+    <li><strong>Para cada cuidador, tus propias decisiones</strong>: tú decides a quién invitas, si apruebas la cuenta que acepta y qué puede ver o hacer cada uno, y puedes cambiarlo o quitarle el acceso cuando quieras sin eliminar tu cuenta (apartado 3.1).</li>
+    <li>Eliminar tu cuenta borra tus datos, también lo que Vital guarda en el teléfono donde lo haces, salvo tus preferencias (apartado 1.4); el apartado 6 dice cuánto duran las copias, y que guardamos un registro de lo que aceptaste. Retirar un consentimiento no afecta a lo que se trató antes.</li>
   </ul>
 
-  <h2>3. Para qué usamos tus datos (finalidad)</h2>
+  <h2>3. Para qué usamos tus datos (finalidades)</h2>
   <table>
     <thead><tr><th>Finalidad</th><th>Base legal</th></tr></thead>
     <tbody>
-      <tr><td>Prestarte el servicio descrito en los Términos</td><td>Ejecución de contrato (art. 6.1.b GDPR) + consentimiento explícito para datos de salud (art. 9.2.a)</td></tr>
-      <tr><td>Programar recordatorios de medicación</td><td>Ejecución de contrato</td></tr>
-      <tr><td>Detectar patrones con IA y sugerir preguntas para tu médico</td><td>Consentimiento explícito</td></tr>
-      <tr><td>Compartir información con tus cuidadores designados</td><td>Consentimiento explícito (otorgado al invitarlos)</td></tr>
-      <tr><td>Soporte al usuario</td><td>Interés legítimo</td></tr>
-      <tr><td>Cumplir obligaciones legales</td><td>Obligación legal (art. 6.1.c)</td></tr>
+      <tr><td>Prestarte el servicio descrito en los Términos</td><td>Ejecución del contrato y tu consentimiento para los datos de salud (apartado 2)</td></tr>
+      <tr><td>Programar recordatorios de medicamentos y de citas</td><td>Ejecución del contrato y tu consentimiento para los datos de salud</td></tr>
+      <tr><td>Detectar patrones con IA, escribir las sugerencias del día y sugerir preguntas para tu médico</td><td>Tu permiso para la IA (apartado 11)</td></tr>
+      <tr><td>Compartir información con los cuidadores que invitas</td><td>Tu consentimiento, que das al invitar y aprobar a cada uno y elegir qué puede ver</td></tr>
+      <tr><td>Soporte al usuario</td><td>Interés legítimo, y tu consentimiento para los datos de salud que haya de por medio</td></tr>
+      <tr><td>Proteger tu cuenta y el servicio (registro de acciones sensibles, registros técnicos)</td><td>Interés legítimo</td></tr>
+      <tr><td>Cumplir obligaciones legales</td><td>Obligación legal</td></tr>
     </tbody>
   </table>
 
   <h3>3.1 Tus cuidadores</h3>
-  <p>Un cuidador es alguien a quien invitas. Solo ve lo que le permites, sección por sección, y puedes cambiarlo cuando quieras para cada cuidador en Cuidador → Tus cuidadores → Permisos, o quitarle el acceso del todo («Quitar acceso»). La invitación sale con todas las secciones permitidas: desmarca lo que no quieras compartir antes de enviarla.</p>
+  <p>Un cuidador es alguien a quien invitas. Cuando invitas a alguien, eliges las secciones que puede ver: la invitación sale con todas las secciones permitidas, así que desmarca lo que no quieras compartir antes de enviarla. Solo puede aceptarla la cuenta de Vital con el email al que invitaste, y esa cuenta pasa a ser tu cuidador solo cuando la apruebas (la app te muestra su email); hasta entonces no ve ninguna de tus secciones. El enlace de invitación funciona 7 días; si lo vuelves a compartir, se crea un enlace nuevo, que funciona 7 días, y el anterior deja de funcionar. Envía el enlace solo a la persona que invitas: cualquiera que lo tenga puede rechazar la invitación. El email al que invitaste se borra de la invitación pasados 30 días (apartado 6).</p>
+  <p>Puedes cambiar lo que ve cada cuidador cuando quieras en Cuidador → Tus cuidadores → Permisos, o quitarle el acceso del todo («Quitar acceso»). Un cuidador también puede dejar de serlo cuando quiera; te enviamos una notificación cuando lo hace.</p>
   <ul>
-    <li><strong>Qué puede ver, si se lo permites:</strong> tus medicamentos y las tomas de cada día (tomadas, tardías, no tomadas o pendientes), el historial de tomas y tu adherencia; tus mediciones; tus comidas; tu ánimo; tus síntomas, dolor y lo que anotas en el cuerpo; tus próximas citas médicas; y tu informe médico con esas mismas secciones (sin el resumen de la IA). Si añades tu teléfono a tu perfil, lo ve, para llamarte o escribirte por WhatsApp.</li>
-    <li><strong>Qué puede hacer, si se lo permites:</strong> añadir medicamentos a tu lista (no puede cambiar ni borrar nada). Te avisamos con una notificación («Ana añadió un medicamento a tu lista»); sus recordatorios empiezan a sonar en tu teléfono cuando abres Vital y sus tomas cuentan desde entonces.</li>
-    <li><strong>De qué se le avisa:</strong> una notificación por cada toma que tomas (puede desactivarlas) y por cada toma que no tomas: saltada, o sin marcar 2 horas después de su hora. Tras 2 días sin ninguna toma registrada, un solo aviso en vez de uno por toma. La notificación dice quién y qué pasó («María no tomó una dosis»), nunca el medicamento ni la dosis; el detalle está en la app.</li>
+    <li><strong>Qué puede ver, si se lo permites:</strong> tus medicamentos y las tomas de cada día (tomadas, tardías, no tomadas o pendientes), el historial de tomas y tu adherencia; tus mediciones; tus comidas; tu ánimo; tus síntomas, dolor y lo que anotas en el cuerpo; tus citas médicas (las próximas y las de las últimas 24 horas); tu perfil de salud (año de nacimiento, peso, altura, tipo de sangre, alergias, enfermedades crónicas y contacto de emergencia); y tu informe médico con esas mismas secciones (sin el resumen de la IA). Si le permites «Síntomas, dolor y lo que anotas en el cuerpo» o «Perfil de salud», también puede leer tu sexo, que la app usa para dibujar la silueta del cuerpo.</li>
+    <li><strong>Qué ve todo cuidador que apruebas:</strong> tu nombre y, si lo añadiste, tu teléfono, para que pueda llamarte o escribirte por WhatsApp.</li>
+    <li><strong>Qué puede hacer, si se lo permites:</strong> proponer medicamentos para tu lista (no puede cambiar ni borrar nada). Te avisamos con una notificación («Ana propone un medicamento para tu lista») y el medicamento espera en la pestaña Medicación hasta que lo añadas o lo rechaces: hasta que lo añades, no suena, no cuenta en tus tomas, no se revisa con tus otros medicamentos y no se envía a las funciones de IA. Cuando lo añades, sus recordatorios empiezan a sonar en tu teléfono y sus tomas cuentan desde entonces.</li>
+    <li><strong>De qué se le avisa:</strong> una notificación por cada toma que tomas (puede desactivarlas) y por cada toma que no tomas: saltada, o sin marcar 2 horas después de su hora. Tras 2 días sin ninguna toma registrada, un solo aviso en vez de uno por toma. La notificación dice quién y qué pasó («María no tomó una dosis»), nunca el medicamento ni la dosis; el detalle está en la app. Las notificaciones pueden llegar tarde o no llegar (ver el <a href="./medical-disclaimer.html">Aviso médico</a>).</li>
+    <li><strong>Si eres cuidador:</strong> el paciente cuya invitación aceptas ve tu nombre y el email de tu cuenta, nunca el resto de tu perfil, y los medicamentos que propones muestran tu nombre. El email al que te invitó un paciente se borra de la invitación pasados 30 días (apartado 6); lo usamos para enviarte la invitación, y tu cuenta para enviarte sus avisos. Puedes dejar de cuidar a un paciente cuando quieras («Dejar de cuidar a …»); se lo comunicamos.</li>
   </ul>
 
-  <h2>4. Con quién compartimos tus datos (subprocesadores)</h2>
-  <p>Para operar Vital usamos los siguientes proveedores. Todos están sujetos a un Acuerdo de Tratamiento de Datos (DPA) y aplican medidas técnicas y organizativas adecuadas.</p>
+  <h2>4. Con quién compartimos tus datos</h2>
+  <p>Para operar Vital usamos los siguientes proveedores. Cada uno recibe solo lo que necesita su función, y usamos proveedores cuyas condiciones los obligan a mantener esos datos seguros. Supabase y Resend tratan tus datos por encargo nuestro con los acuerdos de tratamiento de datos que forman parte de sus condiciones de servicio. Expo trata lo que recibe según sus condiciones de servicio y su política de privacidad. OpenRouter y Google reciben lo que envían las funciones de IA solo si permites las funciones de IA (apartado 11). Apple y GitHub actúan según sus propias condiciones y políticas de privacidad.</p>
   <table>
     <thead><tr><th>Proveedor</th><th>Función</th><th>Ubicación</th></tr></thead>
     <tbody>
-      <tr><td><strong>Supabase, Inc.</strong></td><td>Autenticación, base de datos (Postgres), almacenamiento, funciones edge</td><td>EE. UU. (región us-east-1) con SCC firmadas</td></tr>
-      <tr><td><strong>OpenRouter, Inc.</strong></td><td>Pasarela a modelos de IA (Google Gemini, Moonshot Kimi, etc.) para las funciones de IA que permitas: chat con el asistente (con las fotos que le envías), dictado por voz, fotos de pastillas y recetas, información e interacciones de medicamentos, sugerencias del día, detección de patrones y resúmenes del informe. Consulta el apartado 11 para ver qué envía cada una.</td><td>EE. UU. con SCC firmadas. Configuramos los modelos para que NO usen tus datos en entrenamiento.</td></tr>
-      <tr><td><strong>Resend, Inc.</strong></td><td>Envío del email de invitación a cuidador</td><td>EE. UU. con SCC firmadas</td></tr>
-      <tr><td><strong>Expo, Inc.</strong></td><td>Servicio de notificaciones push (Expo Push API → APNs/FCM). La notificación que lleva dice quién y qué pasó (por ejemplo «María no tomó una dosis»), nunca un medicamento ni una dosis.</td><td>EE. UU.</td></tr>
-      <tr><td><strong>Apple Inc.</strong></td><td>Distribución vía App Store y entrega de notificaciones push (APNs)</td><td>EE. UU. con SCC firmadas</td></tr>
-      <tr><td><strong>Google LLC</strong></td><td>Distribución vía Play Store</td><td>EE. UU. con SCC firmadas</td></tr>
+      <tr><td><strong>Supabase, Inc.</strong></td><td>Autenticación, base de datos (Postgres) y funciones del servidor. Guarda tu cuenta y tus datos de salud.</td><td>EE. UU. (región us-east-1)</td></tr>
+      <tr><td><strong>OpenRouter, Inc.</strong></td><td>Pasarela que lleva las peticiones de las funciones de IA que permitas al modelo de IA que las responde (hoy Google Gemini 3.5 Flash-Lite): chat con el asistente (con las fotos que le envías), dictado por voz, fotos de pastillas y recetas, información e interacciones de medicamentos, sugerencias del día, detección de patrones y resúmenes del informe. Cada petición pide a OpenRouter que use solo proveedores de modelos que, según la clasificación de OpenRouter, no recogen datos de los usuarios. El apartado 11 dice qué envía cada función.</td><td>EE. UU.</td></tr>
+      <tr><td><strong>Google LLC</strong></td><td>Ejecuta el modelo Gemini, en Google Cloud Vertex AI, al que OpenRouter envía esas peticiones.</td><td>EE. UU.</td></tr>
+      <tr><td><strong>Resend</strong> (Plus Five Five, Inc.)</td><td>Envío de los emails de tu cuenta (como la confirmación del alta y el cambio de contraseña) y del email de invitación a cuidador.</td><td>EE. UU.</td></tr>
+      <tr><td><strong>Expo</strong> (650 Industries, Inc.)</td><td>Servicio de notificaciones push (Expo Push API → APNs/FCM) y actualizaciones de la app (EAS Update). Una notificación dice quién y qué pasó (por ejemplo «María no tomó una dosis»), nunca un medicamento ni una dosis. Cada vez que se abre, la app pregunta a Expo si hay una actualización, lo que da a Expo tu dirección IP, la plataforma, la versión de la app y un identificador aleatorio de esta instalación, nunca tus datos de salud.</td><td>EE. UU.</td></tr>
+      <tr><td><strong>Apple Inc.</strong></td><td>Distribución vía App Store, entrega de notificaciones push (APNs) y, si lo usas, Iniciar sesión con Apple.</td><td>EE. UU.</td></tr>
+      <tr><td><strong>GitHub, Inc.</strong></td><td>Alojamiento de estas páginas legales (GitHub Pages). GitHub registra la dirección IP de cada visita.</td><td>EE. UU.</td></tr>
     </tbody>
   </table>
+  <p>Compartimos tus datos con tus cuidadores solo como tú decides (apartado 3.1), y con las autoridades solo cuando lo exige una orden legal válida.</p>
   <p><strong>No vendemos tus datos.</strong> No los cedemos a terceros con fines comerciales o publicitarios.</p>
 
-  <h2>5. Transferencias internacionales</h2>
-  <p>Tus datos se almacenan en servidores de Supabase en EE. UU. Las transferencias fuera del Espacio Económico Europeo se protegen mediante <strong>Cláusulas Contractuales Tipo (SCC)</strong> aprobadas por la Comisión Europea, conforme al art. 46 GDPR.</p>
+  <h2>5. Dónde se tratan tus datos</h2>
+  <p>Vital se opera desde Estados Unidos, y tu cuenta y tus datos de salud se guardan en la base de datos de Supabase en Estados Unidos (región us-east-1). Las peticiones de las funciones de IA las tratan OpenRouter y Google, y nuestros demás proveedores tratan lo que reciben, en los centros de datos que esos proveedores eligen. Si usas Vital desde fuera de Estados Unidos, tus datos se envían y se tratan en Estados Unidos, donde las leyes de protección de datos pueden ser distintas de las de tu país. Vital se ofrece en Estados Unidos y no está dirigida a quienes viven en la Unión Europea, el Espacio Económico Europeo, el Reino Unido o Suiza.</p>
 
   <h2>6. Cuánto tiempo conservamos tus datos</h2>
   <table>
     <thead><tr><th>Dato</th><th>Conservación</th></tr></thead>
     <tbody>
-      <tr><td>Datos de cuenta y diario de salud</td><td>Mientras tengas cuenta activa</td></tr>
-      <tr><td>Tras eliminar tu cuenta</td><td>Borrado completo en un plazo máximo de <strong>30 días</strong>, salvo obligación legal de conservación</td></tr>
-      <tr><td>Logs de auditoría (acceso, cambios sensibles)</td><td>12 meses</td></tr>
-      <tr><td>Caché de interacciones medicamentosas e info de fármacos</td><td>30 días (anonimizada al expirar)</td></tr>
+      <tr><td>Tu cuenta, perfil, medicamentos, diario de salud, citas, cuidadores y el resto de los datos de tu cuenta</td><td>Mientras tengas cuenta activa</td></tr>
+      <tr><td>Tras eliminar tu cuenta</td><td>Se borra de nuestra base de datos en el momento, salvo el registro de lo que aceptaste (más abajo). Las copias en los backups y registros de nuestro proveedor de base de datos desaparecen en 7 días, salvo obligación legal de conservación. Los emails ya enviados, como una invitación a cuidador, se quedan en el buzón de quien los recibió, y en nuestro proveedor de email el tiempo que permitan sus propias normas.</td></tr>
+      <tr><td>Lo que ven tus cuidadores, y sus avisos, comentarios y medicamentos propuestos</td><td>Su acceso termina en cuanto lo quitas o deja de ser tu cuidador. Los avisos, los comentarios y las propuestas se borran al eliminarse cualquiera de las dos cuentas; un medicamento que añadiste desde una propuesta sigue en tu lista.</td></tr>
+      <tr><td>Invitaciones a cuidadores (el email al que se invitó, la relación que indicaste y los permisos)</td><td>Cada enlace de invitación funciona 7 días. Una invitación que nadie aceptó se borra pasados 30 días, contados desde la última vez que se envió; en una que se aceptó, se borra entonces el email al que se invitó. Nuestro registro de acciones sensibles guarda que se hizo una invitación, sin ese email (fila de abajo).</td></tr>
+      <tr><td>Registro de lo que aceptaste (cada documento, su versión y la fecha, con el identificador de la cuenta y tu email como un hash con clave; sin datos de salud)</td><td>Mientras exista tu cuenta y 5 años después de eliminarla, guardado aparte y usado solo ante una reclamación legal</td></tr>
+      <tr><td>Registro de acciones sensibles de tu cuenta (cambios de perfil o de contraseña; invitaciones a cuidadores, sin el email al que se invitó; aceptaciones, cambios de permisos y retiradas de cuidadores; medicamentos añadidos o borrados; tus decisiones sobre la IA; exportaciones de datos)</td><td>12 meses, o hasta que elimines tu cuenta si es antes</td></tr>
+      <tr><td>Tus sesiones (dirección IP y dispositivo de cada inicio de sesión)</td><td>Mientras la sesión esté abierta; cerrar sesión con conexión, o eliminar tu cuenta, la termina</td></tr>
+      <tr><td>Registros técnicos de nuestro proveedor de base de datos (dirección IP, dispositivo, peticiones)</td><td>Hasta 7 días</td></tr>
+      <tr><td>Lo que nuestros demás proveedores guardan de los emails, las notificaciones, las comprobaciones de actualizaciones de la app y las peticiones de IA que pasan por ellos</td><td>El tiempo que cada proveedor lo guarde según sus propias condiciones</td></tr>
+      <tr><td>Respuestas de interacciones (guardadas solo con los nombres de los medicamentos, nunca con tu cuenta)</td><td>Se guardan 30 días y después se borran</td></tr>
+      <tr><td>Información de un medicamento que abres (guardada con ese medicamento)</td><td>Hasta que borres el medicamento o tu cuenta; se vuelve a escribir si la abres pasados 30 días o en otro idioma</td></tr>
+      <tr><td>Lo que el asistente te propone guardar, si tu app aún no se ha actualizado para mostrar «Guardar» (apartado 11.2)</td><td>30 minutos, para guardarlo con su código; después se borra en los 15 minutos siguientes, o antes si eliminas tu cuenta</td></tr>
       <tr><td>En tu teléfono: la sesión, los recordatorios, las sugerencias del día y los patrones detectados (apartado 1.4)</td><td>Hasta que cierres sesión, elimines tu cuenta o desinstales la app</td></tr>
-      <tr><td>En tu teléfono: las calificaciones de interacciones, la lista de la última revisión y tu decisión sobre la IA</td><td>Hasta que elimines tu cuenta o desinstales la app. Una pareja de medicamentos que ya no está en tu lista se borra en la primera revisión que se haga al menos 180 días después de la última que la incluyó</td></tr>
+      <tr><td>En tu teléfono: las calificaciones de interacciones, la lista de la última revisión, tu decisión sobre la IA y la silueta que elegiste para el mapa del cuerpo</td><td>Hasta que elimines tu cuenta o desinstales la app. Una pareja de medicamentos que ya no está en tu lista se borra en la primera revisión que se haga al menos 180 días después de la última que la incluyó</td></tr>
       <tr><td>En tu teléfono: copias temporales (exportación, informe compartido, fotos, grabaciones de voz)</td><td>Hasta que el teléfono vacíe sus archivos temporales, elimines tu cuenta o desinstales la app</td></tr>
-      <tr><td>En tu teléfono: preferencias (idioma, tema, voz)</td><td>Hasta que desinstales la app</td></tr>
+      <tr><td>En tu teléfono: preferencias (idioma, tema, voz) y los identificadores de esta instalación</td><td>Hasta que desinstales la app</td></tr>
     </tbody>
   </table>
 
   <h2>7. Tus derechos</h2>
   <p>Tienes derecho a:</p>
   <ul>
-    <li><strong>Acceder</strong> a tus datos: desde Ajustes → Privacidad → "Descargar mis datos" se genera un export JSON con todo lo que tenemos sobre ti.</li>
-    <li><strong>Rectificar</strong> datos inexactos: edita tu perfil o pídenoslo por email.</li>
-    <li><strong>Suprimir</strong> tus datos (derecho al olvido): Ajustes → Privacidad → "Eliminar mi cuenta" o pídelo por email. Eliminar la cuenta borra también lo que Vital guarda en el teléfono donde lo haces (apartado 1.4); en otro teléfono donde hayas usado Vital, desinstala la app para borrar su copia.</li>
+    <li><strong>Acceder</strong> a tus datos: desde Ajustes → Privacidad y datos → «Descargar mis datos» puedes generar un archivo JSON con los datos de tu cuenta, tu perfil, medicamentos, horarios y tomas, ánimo, síntomas, anotaciones en el cuerpo y comidas, mediciones, citas, los patrones que detectó la IA, tus cuidadores, los medicamentos que propusieron para tu lista (o, como cuidador, los que propusiste), los avisos y comentarios de cuidadores sobre tus tomas (o, como cuidador, los que recibiste y escribiste), tus consentimientos, nuestro registro de acciones sensibles de tu cuenta, los teléfonos registrados para tus notificaciones (sin el token en sí), tus ajustes y las tablas que se guardan para funciones que la app de hoy no rellena (conversaciones y notificaciones de IA, informes guardados, suscripciones, dispositivos wearables y métricas de salud). Si una parte de tus datos no se puede leer, la app muestra un error en vez de crear un archivo incompleto. El archivo no puede incluir el recuento de las llamadas al modelo de IA hechas para ti que usa el límite diario, las notificaciones que nuestro servidor puso en cola para ti ni el valor de tu token de notificaciones: pídenoslos en <a href="mailto:vital-app@ifa-tech.com">vital-app@ifa-tech.com</a>, como cualquier otro dato que tengamos sobre ti.</li>
+    <li><strong>Rectificar</strong> datos inexactos: edita tu perfil y tus registros en la app, o pídenoslo por email.</li>
+    <li><strong>Suprimir</strong> tus datos (derecho de supresión): Ajustes → Privacidad y datos → «Eliminar mi cuenta», o pídelo por email. Eliminar la cuenta borra también lo que Vital guarda en el teléfono donde lo haces, salvo tus preferencias (apartado 1.4); en otro teléfono donde hayas usado Vital, desinstala la app para borrar su copia. Si entraste con Apple, también puedes retirar el acceso de Vital a tu Apple ID cuando quieras en los ajustes de tu cuenta de Apple (Iniciar sesión con Apple).</li>
     <li><strong>Limitar</strong> el tratamiento.</li>
     <li><strong>Oponerte</strong> a tratamientos basados en interés legítimo.</li>
-    <li><strong>Portar</strong> tus datos a otro proveedor (el export JSON cumple este derecho).</li>
-    <li><strong>Retirar el consentimiento</strong> en cualquier momento, sin afectar la licitud del tratamiento previo.</li>
-    <li><strong>No ser objeto de decisiones automatizadas</strong> con efectos jurídicos. Las sugerencias de IA en Vital son <em>orientativas y revisables</em> por ti, nunca automáticas.</li>
-    <li><strong>Reclamar ante una autoridad de control</strong>: <span class="placeholder">la autoridad de control de protección de datos del país de residencia del usuario</span> (por ejemplo, la Agencia Española de Protección de Datos: <a href="https://www.aepd.es">aepd.es</a>).</li>
+    <li><strong>Portar</strong> tus datos a otro proveedor: el archivo JSON es estructurado y legible por máquina.</li>
+    <li><strong>Retirar el consentimiento</strong> en cualquier momento, sin afectar a la licitud del tratamiento previo: tu permiso para la IA en Ajustes → Privacidad y datos, el acceso de un cuidador en Cuidador → Tus cuidadores, y tu consentimiento para los datos de salud eliminando tu cuenta.</li>
+    <li><strong>No ser objeto de decisiones automatizadas</strong> con efectos jurídicos o de importancia similar. Las sugerencias de IA en Vital son <em>orientativas y revisables</em> por ti, nunca automáticas.</li>
   </ul>
-  <p>Para ejercer cualquier derecho, escríbenos a <a href="mailto:vital-app@ifa-tech.com"><span class="placeholder">vital-app@ifa-tech.com</span></a>. Te responderemos en un plazo máximo de 30 días.</p>
+  <p>Para ejercer cualquier derecho, escríbenos a <a href="mailto:vital-app@ifa-tech.com">vital-app@ifa-tech.com</a> desde el email de tu cuenta de Vital. Si no podemos confirmar que una solicitud es tuya, podemos pedirte datos para comprobarlo, y solo los usamos para eso. Las solicitudes son gratuitas. Respondemos en un plazo de 45 días desde que recibimos tu solicitud; si necesitamos más tiempo, podemos ampliarlo una vez otros 45 días, y te diremos por qué dentro de los primeros 45 días.</p>
+
+  <h3>7.1 Residentes en California (CCPA / CPRA)</h3>
+  <p>La California Consumer Privacy Act, reformada por la California Privacy Rights Act, no se aplica hoy a Vital, pero damos sus derechos a todos los usuarios, vivan donde vivan. Entre ellos, el derecho a:</p>
+  <ul>
+    <li>Saber qué información personal se recoge y para qué.</li>
+    <li>Pedir que se elimine tu información personal.</li>
+    <li>Corregir la información personal inexacta.</li>
+    <li>Oponerte a la venta o cesión de información personal — <strong>nota: no vendemos ni cedemos información personal para publicidad basada en tu actividad en otros servicios.</strong></li>
+    <li>Limitar el uso de la información personal sensible.</li>
+    <li>No ser discriminado por ejercer tus derechos.</li>
+  </ul>
+
+  <h3>7.2 Reclamaciones</h3>
+  <p>Puedes presentar una reclamación ante la Comisión Federal de Comercio de EE. UU. (<a href="https://reportfraud.ftc.gov">reportfraud.ftc.gov</a>) o ante el Fiscal General de tu estado (en California, también ante la California Privacy Protection Agency, <a href="https://cppa.ca.gov">cppa.ca.gov</a>) o, si vives fuera de Estados Unidos, ante la autoridad de protección de datos de tu país.</p>
+
+  <h3>7.3 Otros estados de EE. UU.</h3>
+  <p>Los residentes de Connecticut y de otros estados con leyes de privacidad del consumidor pueden ejercer los derechos de este apartado de la misma forma, en los plazos indicados arriba. Si rechazamos tu solicitud, puedes apelar respondiendo a nuestra respuesta o escribiendo a <a href="mailto:vital-app@ifa-tech.com">vital-app@ifa-tech.com</a> con el asunto «Apelación»; respondemos a tu apelación en 45 días y, si la rechazamos, te decimos cómo contactar con el Fiscal General de tu estado. No vendemos datos personales ni los usamos para publicidad dirigida, y no recogemos, usamos ni vendemos datos personales para entrenar modelos de lenguaje de gran tamaño. Los residentes de Washington y Nevada tienen los derechos sobre sus datos de salud que describe nuestra <a href="./consumer-health-data.html">Política de privacidad de datos de salud del consumidor</a>.</p>
 
   <h2>8. Seguridad</h2>
   <p>Aplicamos medidas técnicas y organizativas adecuadas:</p>
   <ul>
-    <li><strong>Cifrado en tránsito</strong>: todas las comunicaciones usan TLS 1.2+.</li>
-    <li><strong>Cifrado en reposo</strong>: Supabase cifra la base de datos AES-256.</li>
-    <li><strong>Hashing fuerte</strong>: las contraseñas se almacenan con bcrypt.</li>
-    <li><strong>Aislamiento por usuario (RLS)</strong>: las políticas de Row Level Security garantizan que cada usuario solo accede a sus propios datos.</li>
-    <li><strong>Acceso restringido</strong>: ningún empleado tiene acceso rutinario a datos de salud individuales.</li>
-    <li><strong>Auditoría</strong>: registramos accesos y cambios sensibles.</li>
-    <li><strong>Backups</strong>: diarios, cifrados, con retención de 7 días.</li>
-    <li><strong>Notificación de brechas</strong>: en caso de una violación de seguridad con riesgo para tus derechos, notificaremos a la autoridad de control en un plazo máximo de <strong>72 horas</strong> y a ti sin demora indebida, conforme al art. 33–34 GDPR.</li>
+    <li><strong>Cifrado en tránsito:</strong> la app y nuestros servidores se comunican solo con TLS 1.2 o 1.3.</li>
+    <li><strong>Cifrado en reposo:</strong> Supabase cifra la base de datos con AES-256.</li>
+    <li><strong>Hash de contraseñas:</strong> solo guardamos un hash bcrypt de tu contraseña, nunca la contraseña.</li>
+    <li><strong>Aislamiento por usuario (RLS):</strong> las políticas de Row Level Security limitan cada cuenta a sus propios datos y a lo que un paciente comparte con los cuidadores que invita y aprueba (el apartado 3.1 dice qué pueden leer el uno del otro un paciente y un cuidador). Nuestras funciones del servidor y las tareas programadas de la base de datos usan un acceso ampliado solo para las tareas que describe esta política, como eliminar tu cuenta, enviar notificaciones, registrar las tomas sin marcar, y la revisión de interacciones y sus respuestas compartidas.</li>
+    <li><strong>Acceso restringido:</strong> el acceso a la base de datos de producción está limitado al administrador de la empresa, directamente o a través de las herramientas que usa para operar el servicio, y solo para operarlo y darle soporte; el personal de nuestros proveedores solo puede acceder según sus condiciones.</li>
+    <li><strong>Auditoría:</strong> guardamos un registro de las acciones sensibles de tu cuenta (apartado 6), y nuestro proveedor de base de datos guarda registros técnicos de las peticiones hasta 7 días.</li>
+    <li><strong>Copias de seguridad:</strong> diarias y cifradas; nuestro proveedor de base de datos las guarda 7 días.</li>
+    <li><strong>Aviso de brechas:</strong> si una brecha de seguridad afecta a tu información, te avisaremos sin demora injustificada, por email y en la app, dentro de los plazos que fija la ley (por ejemplo, 30 días según la ley de Florida y 60 días según la Health Breach Notification Rule de la FTC), y avisaremos también a la FTC, a las autoridades estatales y a los medios cuando esas leyes lo exijan.</li>
   </ul>
 
   <h2>9. Menores</h2>
-  <p>Vital no está dirigida a menores de 13 años. Si descubres que un menor ha creado una cuenta sin el consentimiento de su tutor, contáctanos para que la eliminemos.</p>
+  <p>Vital es para personas de 14 años o más. No está dirigida a menores de 13 años y no recogemos a sabiendas datos personales de menores de 13 años (ley estadounidense COPPA). Si el año de nacimiento que se escribe al crear la cuenta, o después en Editar perfil, indica que la persona puede tener menos de 14 años, Vital no crea la cuenta ni guarda ese año. Si sabemos que una cuenta pertenece a una persona menor de 14 años, eliminamos la cuenta y sus datos. Las personas de 14 a 17 años solo pueden usar Vital con permiso de su madre, padre o tutor legal. Si eres madre, padre o tutor y crees que tu hijo o hija tiene una cuenta, escribe a <a href="mailto:vital-app@ifa-tech.com">vital-app@ifa-tech.com</a> y la eliminaremos.</p>
 
-  <h2>10. Cookies y tracking</h2>
-  <p>La aplicación móvil <strong>no usa cookies ni rastreadores publicitarios</strong>. No usamos Google Analytics, Facebook Pixel ni similares. Sí guarda algunos datos en tu teléfono para poder funcionar; los enumera el apartado 1.4.</p>
-  <p>Si en el futuro habilitamos analítica, será con un proveedor respetuoso con la privacidad (PostHog autohospedado o similar) y te pediremos consentimiento previo.</p>
+  <h2>10. Cookies y seguimiento</h2>
+  <p>La aplicación móvil <strong>no usa cookies ni rastreadores publicitarios</strong>. No usamos Google Analytics, Facebook Pixel ni herramientas similares. Sí guarda algunos datos en tu teléfono para poder funcionar; los enumera el apartado 1.4. Estas páginas legales tampoco usan cookies; GitHub, que las aloja, registra la dirección IP de cada visita (apartado 4).</p>
+  <p>Si en el futuro habilitamos analítica, será con un proveedor respetuoso con la privacidad (PostHog autoalojado o similar) y te pediremos tu consentimiento antes.</p>
 
   <h2>11. Inteligencia artificial</h2>
-  <p>Vital usa modelos de IA proporcionados por OpenRouter, que enruta a modelos como Google Gemini, Moonshot Kimi K2 u otros. Los datos que envías al asistente (texto, audio, fotos) se procesan en tiempo real para generar la respuesta y <strong>no se usan para entrenar modelos</strong>, según los acuerdos vigentes con OpenRouter y las políticas de los modelos seleccionados.</p>
+  <p>Las funciones de IA de Vital llegan a un modelo de IA a través de OpenRouter. Hoy todas usan el modelo Gemini 3.5 Flash-Lite de Google, que Google ejecuta en Google Cloud Vertex AI. Los datos que les envías (texto, voz, fotos y los registros de salud que enumera el apartado 11.2) se procesan en tiempo real para dar la respuesta. Los servicios de IA los usan solo para darte las respuestas, lecturas, revisiones, sugerencias y resúmenes que ves en Vital, nunca para publicidad ni para entrenar sus modelos, y <strong>Vital no usa tus datos para entrenar modelos de IA.</strong> Además, cada petición pide a OpenRouter que use solo proveedores de modelos que, según la clasificación de OpenRouter, no recogen datos de los usuarios, en lugar de proveedores que pueden guardarlos o entrenar con ellos.</p>
   <h3>11.1 Tu permiso</h3>
   <p>Las funciones de IA envían parte de tu información a servicios de IA de otras empresas. <strong>Hasta que las permitas, no se envía nada y las funciones de IA permanecen desactivadas.</strong></p>
   <ul>
     <li><strong>Es tu consentimiento explícito, independiente de esta política.</strong> Lo das dentro de la app, en su propio aviso, antes de que se ejecute la primera función de IA. Un solo permiso cubre todas las funciones de IA. Aceptar esta política no lo concede.</li>
     <li><strong>Queda registrado.</strong> Guardamos cada decisión (permitida o desactivada) con su fecha y la versión de la explicación que se te mostró.</li>
-    <li><strong>Puedes retirarlo en cualquier momento</strong> en Ajustes → Privacidad y datos, <strong>sin eliminar tu cuenta</strong>. Desde ese momento no se envía nada más. Retirarlo no puede deshacer lo que ya se procesó.</li>
+    <li><strong>Puedes retirarlo en cualquier momento</strong> en Ajustes → Privacidad y datos, <strong>sin eliminar tu cuenta</strong>. Desde ese momento no se envía nada más; si lo retiras sin conexión, la retirada llega a nuestro servidor cuando el teléfono vuelve a tener conexión. Retirarlo no puede deshacer lo que ya se procesó.</li>
   </ul>
 
   <h3>11.2 Qué envía cada función de IA</h3>
   <p>Una vez que has permitido las funciones de IA, estas son las funciones que envían información a OpenRouter y lo que envía cada una. Algunas se ejecutan solas; las demás, cuando las usas.</p>
   <ul>
-    <li><strong>Chat con el asistente.</strong> Lo que escribes o dices al asistente, la foto que le envías si añades una (por ejemplo de un medicamento, la piel, una herida o una comida) y los últimos mensajes de la conversación (hasta 30), incluidas las confirmaciones de lo que el asistente registra por ti. Una foto va solo con su mensaje y Vital no la guarda; los mensajes anteriores solo la mencionan como «[foto]». Se ejecuta cuando envías un mensaje.</li>
-    <li><strong>Dictado por voz.</strong> La grabación de tu voz, para convertirla en texto. Se ejecuta cuando dictas con el micrófono.</li>
-    <li><strong>Fotos de pastillas y recetas.</strong> La foto que haces o eliges. La foto de una receta puede mostrar tu nombre y el de tu médico. Se ejecuta cuando haces o eliges una foto para identificar una pastilla o leer una receta.</li>
-    <li><strong>Información e interacciones de medicamentos.</strong> El nombre del medicamento que consultas, o los nombres de tus medicamentos en una revisión de interacciones. No se envían las dosis ni otros detalles. Se ejecutan cuando abres la información de un medicamento o la revisión de interacciones, y la revisión de interacciones también se ejecuta sola al guardar un medicamento nuevo, para compararlo con los demás. Cuando un cuidador al que se lo permites añade un medicamento a tu lista, la revisión se ejecuta en su teléfono con los nombres de tus medicamentos, solo si tú has permitido las funciones de IA (y esa persona también).</li>
+    <li><strong>Chat con el asistente.</strong> Lo que escribes o dices al asistente, la foto que le envías si añades una (por ejemplo de un medicamento, la piel, una herida o una comida) y los últimos mensajes de la conversación (hasta 30, y como mucho 16.000 caracteres), incluido lo que el asistente te propuso guardar y lo que hiciste con cada propuesta. Una foto va solo con su mensaje, sin los datos guardados en su archivo sobre dónde, cuándo y con qué dispositivo se hizo (nuestro servidor los quita antes de enviarla), y Vital no la guarda; los mensajes anteriores solo la mencionan como «[foto]», en cualquier idioma de la app. Se ejecuta cuando envías un mensaje. Lo que el asistente te propone guardar solo se guarda cuando tocas «Guardar», que no envía nada al modelo de IA: nuestro servidor lo vuelve a comprobar y lo escribe en tu cuenta. Si tu app aún no se ha actualizado para mostrar «Guardar», la respuesta enumera las propuestas con un código de 4 cifras, las guardas respondiendo «guardar» y el código (por ejemplo «guardar 4821»), y nuestro servidor las conserva 30 minutos y después las borra (apartado 6).</li>
+    <li><strong>Dictado por voz.</strong> La grabación de tu voz (como mucho 10 minutos), para convertirla en texto. Se ejecuta cuando mantienes pulsado para hablar con el asistente.</li>
+    <li><strong>Fotos de pastillas y recetas.</strong> La foto que haces o eliges, sin los datos guardados en su archivo sobre dónde, cuándo y con qué dispositivo se hizo (nuestro servidor los quita antes de enviarla). La foto de una receta puede mostrar tu nombre y el de tu médico. Vital no la guarda. Se ejecuta cuando haces o eliges una foto para identificar una pastilla o leer una receta.</li>
+    <li><strong>Información e interacciones de medicamentos.</strong> El nombre del medicamento que consultas o, en una revisión de interacciones, los nombres de los medicamentos activos de tu lista, que nuestro servidor lee de tu cuenta. No se envían las dosis ni otros detalles. Se ejecutan cuando abres la información de un medicamento o la revisión de interacciones; la revisión de interacciones también se ejecuta sola al guardar o renombrar un medicamento, al guardar uno que te propuso el asistente, al añadir uno que te propuso un cuidador y al abrir Medicación si la revisión de alguno no terminó, para compararlo con los demás.</li>
     <li><strong>Sugerencias del día.</strong> Una instantánea de tu día: cuántas de las tomas de hoy están tomadas, saltadas, no tomadas o pendientes; el ánimo de hoy; si anotaste dolor hoy; tu adherencia de los últimos 7 días; y los síntomas y el dolor que anotaste en los últimos 3 días. Se ejecuta sola al abrir Vital.</li>
-    <li><strong>Detección de patrones.</strong> Tus medicamentos guardados (nombre, dosis y fecha de inicio) y, de los últimos 30 días, el estado de cada toma programada, tus síntomas, tus anotaciones de dolor, tus registros de ánimo, estrés y energía, y las mediciones manuales como la presión arterial o la glucosa. Se ejecuta sola, en segundo plano, después de guardar un medicamento o una medición, o cuando el asistente registra por ti un medicamento, un síntoma, un dolor o una medición, y cuando la pides desde la pestaña Salud.</li>
+    <li><strong>Detección de patrones.</strong> Tus medicamentos guardados (nombre, dosis y fecha de inicio) y, de los últimos 30 días, el estado de cada toma programada, tus síntomas, tus anotaciones de dolor, tus registros de ánimo, estrés y energía, y las mediciones manuales como la presión arterial o la glucosa. Se ejecuta sola, en segundo plano, después de guardar un medicamento o una medición, o un medicamento, un síntoma, un dolor o una medición que te propuso el asistente, y cuando la pides desde la pestaña Salud.</li>
     <li><strong>Resumen del informe.</strong> Del informe médico de los últimos 30 días: cifras de adherencia, tus medicamentos (nombre, dosis y horas del día), síntomas y dolor con sus fechas, y tu ánimo medio. Antes de enviar los datos, nuestro servidor conserva solo estos campos, de modo que tu nombre, tu email y el identificador de tu cuenta quedan fuera. Se ejecuta sola al abrir el informe médico.</li>
   </ul>
 
   <p>Las respuestas de la IA <strong>pueden contener errores</strong> y nunca constituyen consejo médico. Lee el <a href="./medical-disclaimer.html">Aviso médico</a> completo.</p>
 
   <h2>12. Cambios en esta política</h2>
-  <p>Te notificaremos cambios materiales con al menos <strong>30 días</strong> de antelación a través de la app o por email. La fecha de última actualización aparece arriba.</p>
+  <p>Si hacemos un cambio importante en esta política, te avisaremos en la app o por email antes de que entre en vigor. Si un cambio nos permitiera usar o compartir de forma sustancialmente distinta datos que ya nos diste, o recoger categorías nuevas de datos de salud o usarlas para finalidades nuevas, te pediremos antes tu consentimiento; sin él, el cambio no se aplicará a tus datos. También te pediremos que aceptes la nueva política en la app. La fecha de última actualización aparece arriba.</p>
 
   <h2>13. Contacto</h2>
   <p>
-    <strong>Privacidad / DPO:</strong> <a href="mailto:vital-app@ifa-tech.com"><span class="placeholder">vital-app@ifa-tech.com</span></a><br>
-    <strong>Soporte general:</strong> <a href="mailto:vital-app@ifa-tech.com"><span class="placeholder">vital-app@ifa-tech.com</span></a><br>
-    <strong>Dirección postal:</strong> <span class="placeholder">7950 NW 53rd St, Suite 342, Doral, FL 33166, USA</span>
+    <strong>Privacidad:</strong> <a href="mailto:vital-app@ifa-tech.com">vital-app@ifa-tech.com</a><br>
+    <strong>Soporte general:</strong> <a href="mailto:vital-app@ifa-tech.com">vital-app@ifa-tech.com</a><br>
+    <strong>Dirección postal:</strong> IFA- TECH LLC, 7950 NW 53rd St, Suite 342, Doral, FL 33166, EE. UU.
   </p>
 
 </body>

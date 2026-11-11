@@ -34,7 +34,7 @@
   <nav><a href="./index.html">← Legal Information</a></nav>
   <h1>Privacy Policy</h1>
   <p class="meta">
-    Last updated: October 29, 2026<br>
+    Last updated: November 11, 2026<br>
     Data controller: IFA- TECH LLC<br>
     Address: 7950 NW 53rd St, Suite 342, Doral, FL 33166, USA<br>
     Privacy contact: <a href="mailto:vital-app@ifa-tech.com">vital-app@ifa-tech.com</a>
@@ -42,27 +42,31 @@
 
   <div class="key">
     <strong>Plain-language summary (not a substitute for the full text):</strong><br>
-    We collect only the data you choose to give us so the app can work. Your health data is yours. We never sell it. We share it only with the technical providers we need to operate (Supabase, OpenRouter, Apple, Google). You can export or delete your data at any time from Settings → Privacy and Data. AI features, which send some of your entries to AI services, stay off until you allow them inside the app, and you can turn them off at any time without deleting your account.
+    We collect the data you choose to give us, plus some technical data the app needs to work (Section 1.2). Your health data is yours. We never sell it. We share it only with the technical providers we need to operate (Supabase; OpenRouter and Google for the AI features; Expo, Resend and Apple), with the caregivers you invite and approve and, when the law requires it, with public authorities. You can download or delete your data at any time from Settings → Privacy and data. AI features, which send some of your entries to AI services, stay off until you allow them inside the app, and you can turn them off at any time without deleting your account.
   </div>
+
+  <p><strong>Where Vital is offered.</strong> Vital is offered in the United States. It is not directed at people who live in the European Union, the European Economic Area, the United Kingdom or Switzerland; if you live there, do not create an account.</p>
+  <p><strong>Washington and Nevada residents:</strong> see also our <a href="./consumer-health-data.html">Consumer Health Data Privacy Policy</a>.</p>
 
   <h2>1. What data we collect</h2>
 
   <h3>1.1 Data you provide directly</h3>
   <ul>
-    <li><strong>Account:</strong> email, password (encrypted with bcrypt), preferred language.</li>
-    <li><strong>Profile:</strong> name, phone number (optional; your caregivers see it), year of birth, sex, weight, height, blood type, allergies, chronic conditions, emergency contact.</li>
-    <li><strong>Medications:</strong> name, dose, schedule, instructions, stock, pill photo, prescription photo.</li>
+    <li><strong>Account:</strong> email, password (we keep only its bcrypt hash, never the password itself), preferred language. If you sign in with Apple instead, Apple gives Vital an identifier for your account, your email address or, if you choose to hide it, a private relay address that Apple creates for Vital, and, the first time only, your name. Vital never receives your Apple ID password, and such an account has no Vital password.</li>
+    <li><strong>Profile:</strong> name, phone number (optional), year of birth, sex, weight, height, blood type, allergies, chronic conditions, emergency contact. Section 3.1 says what your caregivers can see of it.</li>
+    <li><strong>Medications:</strong> name, dose, schedule, instructions and stock and, if you open a medication's information, the text the AI wrote about it. A photo you take or choose to identify a pill or read a prescription is sent to the AI features you allow (Section 11) and is not stored on our servers.</li>
     <li><strong>Health journal:</strong> mood, meals, symptoms, vital measurements (blood pressure, glucose, weight, temperature, heart rate, oxygen saturation) and what you note on the body: pain, skin spots, burns, bruises, wounds, fractures, swelling or itching, with the exact spot you mark on the figure, your answers and your notes.</li>
-    <li><strong>Conversations with the assistant:</strong> text and (transcribed) audio.</li>
-    <li><strong>Medical appointments:</strong> doctor, specialty, date, location, notes.</li>
-    <li><strong>Caregivers:</strong> the emails of people you invite, the permissions you grant them, and the medications they add to your list (with who added them).</li>
+    <li><strong>Conversations with the assistant:</strong> what you type or dictate and the photos you send. Vital does not store the conversation: it stays in the app while the app is open. What the assistant offers to record for you (a medication, a symptom…) is saved, like any other entry, only when you tap “Save” on its card; if your app has not yet been updated to show that button, its offers wait on our server for 30 minutes (Section 11.2).</li>
+    <li><strong>Medical appointments:</strong> doctor or center, specialty, date and time, place, notes.</li>
+    <li><strong>Caregivers:</strong> the emails of people you invite, the relationship you note, the permissions you grant them, the medications they propose for your list (with who proposed them and whether you added them), the alerts Vital sends them about your doses and the comments written on those alerts.</li>
   </ul>
 
   <h3>1.2 Data we collect automatically</h3>
   <ul>
-    <li><strong>Device identifier:</strong> push notification token (Apple/Google), registered to your account on this phone with the language of the notification texts — not the device's hardware ID. If another account signs in on the phone, the token moves to that account.</li>
-    <li><strong>App and system version:</strong> for technical support.</li>
-    <li><strong>System language</strong> (so we can show you the UI in your language).</li>
+    <li><strong>Push notification token</strong> (Apple/Google), registered to your account on this phone with the language of the notification texts, the app version, the platform (iOS or Android) and a random identifier of this installation, not the device's hardware ID. If another account signs in on the phone, the token moves to that account.</li>
+    <li><strong>Time zone and language</strong> of your phone: the time zone so that our server knows your local day and time (to record a dose not marked 2 hours after its time, and to give your caregivers the times on your clock), and the language so that the notifications and alerts our server writes for you come in it.</li>
+    <li><strong>Connection data</strong> that our providers record with each request: your IP address, the type of device and app (user agent) and the time. Supabase keeps it with each session while the session lasts and in its logs for up to 7 days. Each time the app starts, it also asks Expo whether there is an update, which gives Expo this data, the app version and a random identifier of this installation (Section 4).</li>
+    <li><strong>Use of AI features:</strong> how many times each one called the AI model for you in the current 24-hour period, to apply the daily limit.</li>
   </ul>
 
   <h3>1.3 Data we do NOT collect</h3>
@@ -81,88 +85,106 @@
     <li><strong>The latest results of the AI features you allow</strong>: daily suggestions and detected patterns, so they appear as soon as you open the app.</li>
     <li><strong>Interaction ratings</strong>: for each pair of your medications, the most serious rating an interaction check showed you and its explanation, so that a later check never shows that pair as milder; and, if you mark a pair as reviewed with your pharmacist, the date and the rating at that time. Also the names of the medications on your list that this phone treats as checked (those in the last check you saw finish or, the first time, those you already had), so that any added without their check finishing get checked.</li>
     <li><strong>Your AI permission decision</strong> (allowed or turned off, with its date and version), so the app knows at once whether it may use the AI features.</li>
+    <li><strong>The body-map figure you picked</strong>, if you signed up as a caregiver (or as both patient and caregiver).</li>
+    <li><strong>A 24-hour pause on creating an account</strong>, only if a year of birth under 14 was entered on this phone (Section 9): the moment it ends, and nothing else. It ends by itself.</li>
     <li><strong>Temporary copies</strong> of your data export, of the medical report you share, and of the photos and voice recordings you send to the AI features (a recording is deleted once it has been sent).</li>
-    <li><strong>Your preferences on this phone</strong>: language, theme and voice.</li>
+    <li><strong>Your preferences on this phone</strong>: language, theme and voice, and the random identifiers of this installation used for notifications and app updates (Section 1.2).</li>
   </ul>
   <p>Apart from what each feature sends when you use it (Sections 4 and 11), this data stays on your phone. Vital asks your phone to leave it out of backups and out of transfers to a new phone (the reminders themselves are kept by the phone's notification system). Signing out removes the reminders (they are set up again when you sign in), the AI results and the session from this phone; deleting your account removes everything listed above except your preferences; uninstalling the app removes all of it. Section 6 gives each period.</p>
 
-  <h2>2. Sensitive / special category data</h2>
-  <p>Vital processes <strong>health data</strong>, which most privacy laws classify as sensitive personal information requiring heightened protection. Your legal basis for this processing is:</p>
+  <h2>2. Health data and your consent</h2>
+  <p>Vital processes <strong>health data</strong>, which most privacy laws treat as sensitive personal information requiring heightened protection. We process it with your consent:</p>
   <ul>
-    <li><strong>Your explicit consent</strong>, given when you accept this Policy during registration and each time you enter a new piece of data.</li>
-    <li><strong>For AI features, a separate explicit consent</strong>, given inside the app (not by accepting this Policy) before any AI feature runs. It is recorded, and you can withdraw it at any time in Settings → Privacy and data, <strong>without deleting your account</strong>. See Section 11.</li>
-    <li>You can also withdraw your consent at any time by deleting your account, which erases all of your data, including what Vital keeps on the phone where you do it (Section 1.4).</li>
+    <li><strong>Your health-data consent</strong>, which you give in its own box when you create your account, separate from the box where you accept the Terms and this Policy. Vital does not create an account without it, because its service is to keep and show you that data. You can withdraw it at any time by deleting your account.</li>
+    <li><strong>For AI features, a separate permission</strong>, given inside the app (not by accepting this Policy) before any AI feature runs. It is recorded, and you can withdraw it at any time in Settings → Privacy and data, <strong>without deleting your account</strong>. See Section 11.</li>
+    <li><strong>For each caregiver, your own choices</strong>: you decide whom to invite, whether to approve the account that accepts and what each one can see or do, and you can change it or remove them at any time without deleting your account (Section 3.1).</li>
+    <li>Deleting your account erases your data, including what Vital keeps on the phone where you do it, except your preferences (Section 1.4); Section 6 says how long copies last, and that we keep a record of what you accepted. Withdrawing a consent does not affect what was processed before.</li>
   </ul>
 
   <h2>3. Why we use your data (purposes)</h2>
   <table>
     <thead><tr><th>Purpose</th><th>Legal basis</th></tr></thead>
     <tbody>
-      <tr><td>Provide the service described in the Terms</td><td>Performance of contract + explicit consent for health data</td></tr>
-      <tr><td>Schedule medication reminders</td><td>Performance of contract</td></tr>
-      <tr><td>Detect patterns with AI and suggest questions for your doctor</td><td>Explicit consent</td></tr>
-      <tr><td>Share information with your designated caregivers</td><td>Explicit consent (granted when you invite them)</td></tr>
-      <tr><td>User support</td><td>Legitimate interest</td></tr>
+      <tr><td>Provide the service described in the Terms</td><td>Performance of contract and your health-data consent (Section 2)</td></tr>
+      <tr><td>Schedule medication and appointment reminders</td><td>Performance of contract and your health-data consent</td></tr>
+      <tr><td>Detect patterns with AI, write daily suggestions and suggest questions for your doctor</td><td>Your AI permission (Section 11)</td></tr>
+      <tr><td>Share information with the caregivers you invite</td><td>Your consent, given when you invite and approve each one and choose what they can see</td></tr>
+      <tr><td>User support</td><td>Legitimate interest, and your health-data consent for any health data involved</td></tr>
+      <tr><td>Protect your account and the service (record of sensitive actions, technical logs)</td><td>Legitimate interest</td></tr>
       <tr><td>Comply with legal obligations</td><td>Legal obligation</td></tr>
     </tbody>
   </table>
 
   <h3>3.1 Your caregivers</h3>
-  <p>A caregiver is someone you invite. They see only what you allow, section by section, and you can change it at any time for each caregiver in Caregiver → Your caregivers → Permissions, or take their access away altogether (“Remove access”). The invitation goes out with every section allowed: uncheck what you do not want to share before sending it.</p>
+  <p>A caregiver is someone you invite. When you invite someone, you choose the sections they can see: the invitation goes out with every section allowed, so uncheck what you do not want to share before sending it. Only the Vital account with the email address you invited can accept, and it becomes your caregiver only when you approve it (the app shows you that account's email address); until then, it sees none of your sections. The invitation link works for 7 days; sharing it again makes a new link, which works for 7 days, and the old one stops working. Send the link only to the person you are inviting: anyone who has it can decline the invitation. The email address you invited is erased from the invitation after 30 days (Section 6).</p>
+  <p>You can change what each caregiver sees at any time in Caregiver → Your caregivers → Permissions, or take their access away altogether (“Remove access”). A caregiver can also stop being your caregiver at any time; we send you a notification when they do.</p>
   <ul>
-    <li><strong>What they can see, if you allow it:</strong> your medications and each day's doses (taken, late, not taken or pending), the dose history and your adherence; your measurements; your meals; your mood; your symptoms, pain and what you note on the body; your upcoming medical appointments; and your medical report with those same sections (without the AI summary). If you add your phone number to your profile, they see it, to call you or write to you on WhatsApp.</li>
-    <li><strong>What they can do, if you allow it:</strong> add medications to your list (they cannot change or delete anything). We tell you with a notification (“Ana added a medication to your list”); its reminders start ringing on your phone once you open Vital, and its doses count from then on.</li>
-    <li><strong>What they are told:</strong> a notification for each dose you take (they can turn these off) and for each dose you do not take: skipped, or not marked 2 hours after its time. After 2 days with no dose recorded, one notice instead of one per dose. The notification says who and what happened (“María didn't take a dose”), never the medication or the dose; the details are in the app.</li>
+    <li><strong>What they can see, if you allow it:</strong> your medications and each day's doses (taken, late, not taken or pending), the dose history and your adherence; your measurements; your meals; your mood; your symptoms, pain and what you note on the body; your medical appointments (upcoming ones and those of the last 24 hours); your health profile (year of birth, weight, height, blood type, allergies, chronic conditions and emergency contact); and your medical report with those same sections (without the AI summary). With “Symptoms, pain and body entries” or “Health profile” allowed, they can also read your sex, which the app uses to draw the body figure.</li>
+    <li><strong>What every caregiver you approve sees:</strong> your name and, if you added it, your phone number, so they can call you or write to you on WhatsApp.</li>
+    <li><strong>What they can do, if you allow it:</strong> propose medications for your list (they cannot change or delete anything). We tell you with a notification (“Ana suggested a medication for your list”), and it waits in the Medications tab until you add it or turn it down: until you add it, it does not remind you, does not count in your doses, is not checked for interactions and is not sent to the AI features. Once you add it, its reminders start ringing on your phone and its doses count from then on.</li>
+    <li><strong>What they are told:</strong> a notification for each dose you take (they can turn these off) and for each dose you do not take: skipped, or not marked 2 hours after its time. After 2 days with no dose recorded, one notice instead of one per dose. The notification says who and what happened (“María didn't take a dose”), never the medication or the dose; the details are in the app. Notifications can arrive late or not at all (see the <a href="./medical-disclaimer.html">Medical Disclaimer</a>).</li>
+    <li><strong>If you are a caregiver:</strong> a patient whose invitation you accept sees your name and the email address of your account, never the rest of your profile, and the medications you propose show your name. The email address a patient invited you with is erased from the invitation after 30 days (Section 6); we use it to send you the invitation, and your account to send you their alerts. You can stop being a patient's caregiver at any time (“Stop caring for …”); we let them know.</li>
   </ul>
 
-  <h2>4. Who we share your data with (subprocessors)</h2>
-  <p>To operate Vital we use the following providers. All are bound by a Data Processing Agreement (DPA) and apply appropriate technical and organizational measures.</p>
+  <h2>4. Who we share your data with</h2>
+  <p>To operate Vital we use the following service providers. Each receives only what its function needs, and we use providers whose terms commit them to keep that data secure. Supabase and Resend process your data on our behalf under the data processing agreements that form part of their terms of service. Expo processes what it receives under its terms of service and privacy policy. OpenRouter and Google receive what the AI features send only if you allow AI features (Section 11). Apple and GitHub act under their own terms and privacy policies.</p>
   <table>
     <thead><tr><th>Provider</th><th>Function</th><th>Location</th></tr></thead>
     <tbody>
-      <tr><td><strong>Supabase, Inc.</strong></td><td>Authentication, Postgres database, storage, edge functions</td><td>USA (us-east-1 region) with signed SCCs</td></tr>
-      <tr><td><strong>OpenRouter, Inc.</strong></td><td>Gateway to AI models (Google Gemini, Moonshot Kimi, etc.) for the AI features you allow: assistant chat (with the photos you send it), voice dictation, pill and prescription photos, medication information and interaction checks, daily suggestions, pattern detection and report summaries. See Section 11 for what each one sends.</td><td>USA with signed SCCs. We configure the models so they do NOT use your data for training.</td></tr>
-      <tr><td><strong>Resend, Inc.</strong></td><td>Sending the caregiver invitation email</td><td>USA with signed SCCs</td></tr>
-      <tr><td><strong>Expo, Inc.</strong></td><td>Push notification service (Expo Push API → APNs/FCM). The notification it carries says who and what happened (for example “María didn't take a dose”), never a medication or a dose.</td><td>USA</td></tr>
-      <tr><td><strong>Apple Inc.</strong></td><td>Distribution via the App Store, and delivery of push notifications (APNs)</td><td>USA with signed SCCs</td></tr>
-      <tr><td><strong>Google LLC</strong></td><td>Distribution via Play Store</td><td>USA with signed SCCs</td></tr>
+      <tr><td><strong>Supabase, Inc.</strong></td><td>Authentication, Postgres database and server functions. It stores your account and your health data.</td><td>USA (us-east-1 region)</td></tr>
+      <tr><td><strong>OpenRouter, Inc.</strong></td><td>Gateway that passes the requests of the AI features you allow to the AI model that answers them (today Google Gemini 3.5 Flash-Lite): assistant chat (with the photos you send it), voice dictation, pill and prescription photos, medication information and interaction checks, daily suggestions, pattern detection and report summaries. Every request asks OpenRouter to use only model providers that, by OpenRouter's classification, do not collect user data. Section 11 says what each feature sends.</td><td>USA</td></tr>
+      <tr><td><strong>Google LLC</strong></td><td>Runs the Gemini model, on Google Cloud Vertex AI, to which OpenRouter sends those requests.</td><td>USA</td></tr>
+      <tr><td><strong>Resend</strong> (Plus Five Five, Inc.)</td><td>Sending the emails about your account (such as the sign-up confirmation and password reset) and the caregiver invitation email.</td><td>USA</td></tr>
+      <tr><td><strong>Expo</strong> (650 Industries, Inc.)</td><td>Push notification service (Expo Push API → APNs/FCM) and app updates (EAS Update). A notification says who and what happened (for example “María didn't take a dose”), never a medication or a dose. Each time the app starts, it asks Expo whether there is an update, which gives Expo your IP address, the platform, the app version and a random identifier of this installation, never your health data.</td><td>USA</td></tr>
+      <tr><td><strong>Apple Inc.</strong></td><td>Distribution via the App Store, delivery of push notifications (APNs) and, if you use it, Sign in with Apple.</td><td>USA</td></tr>
+      <tr><td><strong>GitHub, Inc.</strong></td><td>Hosting of these legal pages (GitHub Pages). GitHub records the IP address of each visit.</td><td>USA</td></tr>
     </tbody>
   </table>
+  <p>We share your data with your caregivers only as you decide (Section 3.1), and with public authorities only when a valid legal order requires it.</p>
   <p><strong>We do not sell your data.</strong> We do not share it with third parties for commercial or advertising purposes.</p>
 
-  <h2>5. International transfers</h2>
-  <p>Your data is stored on Supabase servers in the United States. Transfers from outside the United States are protected by <strong>Standard Contractual Clauses (SCCs)</strong> approved by the European Commission, in accordance with Article 46 of the GDPR, for users located in the European Economic Area.</p>
+  <h2>5. Where your data is processed</h2>
+  <p>Vital is operated from the United States, and your account and health data are stored in Supabase's database in the United States (us-east-1 region). The requests of the AI features are processed by OpenRouter and Google, and our other providers process what they receive, in data centers that those providers choose. If you use Vital from outside the United States, your data is sent to and processed in the United States, where data protection laws may differ from those of your country. Vital is offered in the United States and is not directed at people who live in the European Union, the European Economic Area, the United Kingdom or Switzerland.</p>
 
   <h2>6. How long we keep your data</h2>
   <table>
     <thead><tr><th>Data</th><th>Retention</th></tr></thead>
     <tbody>
-      <tr><td>Account data and health journal</td><td>While your account is active</td></tr>
-      <tr><td>After you delete your account</td><td>Complete erasure within <strong>30 days</strong>, except where a legal retention obligation applies</td></tr>
-      <tr><td>Audit logs (access, sensitive changes)</td><td>12 months</td></tr>
-      <tr><td>Drug interaction and drug info cache</td><td>30 days (anonymized at expiry)</td></tr>
+      <tr><td>Your account, profile, medications, health journal, appointments, caregivers and the rest of the data in your account</td><td>While your account is active</td></tr>
+      <tr><td>After you delete your account</td><td>Erased from our database at once, except the record of what you accepted (below). Copies in our database provider's backups and logs are gone within 7 days, except where a legal retention obligation applies. Emails already sent, such as a caregiver invitation, stay in the recipient's mailbox, and with our email provider for the time its own rules allow.</td></tr>
+      <tr><td>What your caregivers can see, and their alerts, comments and proposed medications</td><td>Their access ends at once when you remove it or they stop being your caregiver. Alerts, comments and proposals are erased when either account is deleted; a medication you added from a proposal stays on your list.</td></tr>
+      <tr><td>Caregiver invitations (the email address invited, the relationship you noted and the permissions)</td><td>Each invitation link works for 7 days. An invitation nobody accepted is deleted after 30 days, counted from when it was last sent; in one that was accepted, the invited email address is erased then. Our record of sensitive actions keeps that an invitation was made, without the address (row below).</td></tr>
+      <tr><td>Record of what you accepted (each document, its version and the date, with your account's identifier and your email as a keyed hash; no health data)</td><td>While your account exists and 5 years after you delete it, kept apart and used only if there is a legal claim</td></tr>
+      <tr><td>Record of sensitive actions in your account (changes to your profile or password; caregiver invitations, without the email address invited; caregiver acceptances, permission changes and removals; medications added or deleted; your AI permission decisions; data exports)</td><td>12 months, or until you delete your account if sooner</td></tr>
+      <tr><td>Your sessions (IP address and device of each sign-in)</td><td>While the session is open; signing out with a connection, or deleting your account, ends it</td></tr>
+      <tr><td>Technical logs of our database provider (IP address, device, requests)</td><td>Up to 7 days</td></tr>
+      <tr><td>What our other providers keep of the emails, notifications, app-update checks and AI requests that go through them</td><td>As long as each provider keeps it under its own terms</td></tr>
+      <tr><td>Drug interaction answers (stored by medication names only, never with your account)</td><td>Kept for 30 days, then deleted</td></tr>
+      <tr><td>Information about a medication you open (saved with that medication)</td><td>Until you delete the medication or your account; written again if you open it after 30 days or in another language</td></tr>
+      <tr><td>What the assistant offers to save, when your app has not yet been updated to show “Save” (Section 11.2)</td><td>30 minutes, to be saved with its code; then deleted within 15 minutes, or sooner if you delete your account</td></tr>
       <tr><td>On your phone: your session, reminders, daily suggestions and detected patterns (Section 1.4)</td><td>Until you sign out, delete your account or uninstall the app</td></tr>
-      <tr><td>On your phone: interaction ratings, the list of the last check and your AI permission decision</td><td>Until you delete your account or uninstall the app. A pair of medications no longer on your list is removed by the first check made at least 180 days after the last check that included it</td></tr>
+      <tr><td>On your phone: interaction ratings, the list of the last check, your AI permission decision and the body-map figure you picked</td><td>Until you delete your account or uninstall the app. A pair of medications no longer on your list is removed by the first check made at least 180 days after the last check that included it</td></tr>
       <tr><td>On your phone: temporary copies (data export, shared report, photos, voice recordings)</td><td>Until your phone clears its temporary files, you delete your account or you uninstall the app</td></tr>
-      <tr><td>On your phone: preferences (language, theme, voice)</td><td>Until you uninstall the app</td></tr>
+      <tr><td>On your phone: preferences (language, theme, voice) and the identifiers of this installation</td><td>Until you uninstall the app</td></tr>
     </tbody>
   </table>
 
   <h2>7. Your rights</h2>
   <p>You have the right to:</p>
   <ul>
-    <li><strong>Access</strong> your data: from Settings → Privacy → "Download my data" you can generate a JSON export with everything we have about you.</li>
-    <li><strong>Correct</strong> inaccurate data: edit your profile or ask us by email.</li>
-    <li><strong>Delete</strong> your data (right to erasure): Settings → Privacy → "Delete my account" or ask us by email. Deleting your account also erases what Vital keeps on the phone where you do it (Section 1.4); on another phone where you used Vital, uninstall the app to erase its copy.</li>
+    <li><strong>Access</strong> your data: from Settings → Privacy and data → “Download my data” you can generate a JSON file with your account details, your profile, medications, schedules and doses, mood, symptoms, body records and meals, measurements, appointments, the patterns the AI detected, your caregivers, the medications they proposed for your list (or, as a caregiver, the ones you proposed), the caregiver alerts and comments about your doses (or, as a caregiver, the ones you received and wrote), your consents, our record of sensitive actions in your account, the phones registered for your notifications (without the token itself), your settings, and the tables kept for features today's app does not fill (AI conversations and notifications, saved reports, subscriptions, wearable devices and health metrics). If part of your data cannot be read, the app shows an error instead of creating an incomplete file. The file cannot include the count of AI model calls made for you that the daily limit uses, the notifications our server queued for you or the value of your notification token: ask us for them at <a href="mailto:vital-app@ifa-tech.com">vital-app@ifa-tech.com</a>, as for anything else we hold about you.</li>
+    <li><strong>Correct</strong> inaccurate data: edit your profile and your entries in the app, or ask us by email.</li>
+    <li><strong>Delete</strong> your data (right to erasure): Settings → Privacy and data → “Delete my account”, or ask us by email. Deleting your account also erases what Vital keeps on the phone where you do it, except your preferences (Section 1.4); on another phone where you used Vital, uninstall the app to erase its copy. If you signed in with Apple, you can also end Vital's access to your Apple ID at any time in your Apple Account settings (Sign in with Apple).</li>
     <li><strong>Restrict</strong> processing.</li>
     <li><strong>Object</strong> to processing based on legitimate interest.</li>
-    <li><strong>Port</strong> your data to another provider (the JSON export satisfies this right).</li>
-    <li><strong>Withdraw consent</strong> at any time, without affecting the lawfulness of prior processing.</li>
-    <li><strong>Not be subject to automated decisions</strong> with legal effects. AI suggestions in Vital are <em>advisory and reviewable</em> by you — never automatic.</li>
+    <li><strong>Port</strong> your data to another provider: the JSON file is structured and machine-readable.</li>
+    <li><strong>Withdraw consent</strong> at any time, without affecting the lawfulness of prior processing: your AI permission in Settings → Privacy and data, a caregiver's access in Caregiver → Your caregivers, and your health-data consent by deleting your account.</li>
+    <li><strong>Not be subject to automated decisions</strong> with legal or similarly significant effects. AI suggestions in Vital are <em>advisory and reviewable</em> by you — never automatic.</li>
   </ul>
+  <p>To exercise any right, write to <a href="mailto:vital-app@ifa-tech.com">vital-app@ifa-tech.com</a> from the email address of your Vital account. If we cannot confirm that a request comes from you, we may ask you for information to verify it, and we use it only for that. Requests are free. We answer within 45 days of receiving your request; if we need more time, we may extend that once by 45 more days, and we will tell you why within the first 45 days.</p>
 
   <h3>7.1 California residents (CCPA / CPRA)</h3>
-  <p>If you reside in California, you have additional rights under the California Consumer Privacy Act and the California Privacy Rights Act, including the right to:</p>
+  <p>The California Consumer Privacy Act, as amended by the California Privacy Rights Act, does not currently apply to Vital, but we give its rights to every user, wherever they live. They include the right to:</p>
   <ul>
     <li>Know what personal information is collected and for what purpose.</li>
     <li>Request deletion of your personal information.</li>
@@ -171,63 +193,65 @@
     <li>Limit the use of sensitive personal information.</li>
     <li>Non-discrimination for exercising your rights.</li>
   </ul>
-  <p>To exercise any right, write to <a href="mailto:vital-app@ifa-tech.com">vital-app@ifa-tech.com</a>. We will respond within 30 days (45 days for CCPA requests, extendable to 90 days if necessary).</p>
 
   <h3>7.2 Filing a complaint</h3>
-  <p>You may file a complaint with the data protection authority of your country or state of residence — for example, the U.S. Federal Trade Commission (<a href="https://reportfraud.ftc.gov">reportfraud.ftc.gov</a>) or your state Attorney General's office (the California Privacy Protection Agency at <a href="https://cppa.ca.gov">cppa.ca.gov</a> for California residents), or your national data protection authority for users outside the United States.</p>
+  <p>You may file a complaint with the U.S. Federal Trade Commission (<a href="https://reportfraud.ftc.gov">reportfraud.ftc.gov</a>) or with your state Attorney General (in California, also with the California Privacy Protection Agency, <a href="https://cppa.ca.gov">cppa.ca.gov</a>), or, if you live outside the United States, with the data protection authority of your country.</p>
+
+  <h3>7.3 Other U.S. states</h3>
+  <p>Residents of Connecticut and of other states with consumer privacy laws can use the rights in this Section in the same way, within the times above. If we decline your request, you can appeal by replying to our answer or by writing to <a href="mailto:vital-app@ifa-tech.com">vital-app@ifa-tech.com</a> with the subject “Appeal”; we answer your appeal within 45 days and, if we deny it, tell you how to contact your state Attorney General. We do not sell personal data or use it for targeted advertising, and we do not collect, use or sell personal data to train large language models. Washington and Nevada residents have the rights over consumer health data described in our <a href="./consumer-health-data.html">Consumer Health Data Privacy Policy</a>.</p>
 
   <h2>8. Security</h2>
   <p>We apply appropriate technical and organizational measures:</p>
   <ul>
-    <li><strong>Encryption in transit:</strong> all communications use TLS 1.2+.</li>
+    <li><strong>Encryption in transit:</strong> the app and our servers communicate only over TLS 1.2 or 1.3.</li>
     <li><strong>Encryption at rest:</strong> Supabase encrypts the database with AES-256.</li>
-    <li><strong>Strong hashing:</strong> passwords are stored using bcrypt.</li>
-    <li><strong>Per-user isolation (RLS):</strong> Row Level Security policies ensure each user can only access their own data.</li>
-    <li><strong>Restricted access:</strong> no employee has routine access to individual health data.</li>
-    <li><strong>Auditing:</strong> we log access and sensitive changes.</li>
-    <li><strong>Backups:</strong> daily, encrypted, with 7-day retention.</li>
-    <li><strong>Breach notification:</strong> in the event of a security breach that creates a risk to your rights, we will notify the relevant authority within <strong>72 hours</strong> and notify you without undue delay, in accordance with applicable laws (including the GDPR Articles 33–34 for EU residents and U.S. state breach notification statutes for U.S. residents).</li>
+    <li><strong>Password hashing:</strong> we keep only a bcrypt hash of your password, never the password itself.</li>
+    <li><strong>Per-user isolation (RLS):</strong> Row Level Security policies limit each account to its own data and to what a patient shares with the caregivers they invite and approve (Section 3.1 says what a patient and a caregiver can read of each other). Our server functions and scheduled database jobs use elevated access only for the tasks this Policy describes, such as deleting your account, sending notifications, recording doses not marked, and the interaction check and its shared answers.</li>
+    <li><strong>Restricted access:</strong> access to the production database is limited to the company's administrator, directly or through the tools the administrator uses to run the service, and only to operate and support it; our providers' staff can access it only as their terms allow.</li>
+    <li><strong>Auditing:</strong> we keep a record of sensitive actions in your account (Section 6), and our database provider keeps technical request logs for up to 7 days.</li>
+    <li><strong>Backups:</strong> daily and encrypted, kept for 7 days by our database provider.</li>
+    <li><strong>Breach notification:</strong> if a breach of security affects your information, we will tell you without unreasonable delay, by email and in the app, within the deadlines the law sets (for example, 30 days under Florida law and 60 days under the FTC Health Breach Notification Rule), and we will also notify the FTC, state authorities and the media when those laws require it.</li>
   </ul>
 
   <h2>9. Minors</h2>
-  <p>Vital is not directed at children under 13. We do not knowingly collect personal information from children under 13 (consistent with the Children's Online Privacy Protection Act, COPPA). If you discover that a minor has created an account without their guardian's consent, contact us so we can remove it.</p>
+  <p>Vital is for people 14 and older. It is not directed at children under 13, and we do not knowingly collect personal information from children under 13 (Children's Online Privacy Protection Act, COPPA). If the year of birth entered when creating an account, or later in Edit profile, shows that the person may be under 14, Vital does not create the account or save that year. If we learn that an account belongs to someone under 14, we delete the account and its data. People aged 14 to 17 may use Vital only with the permission of a parent or legal guardian. A parent or guardian who believes their child has an account can write to <a href="mailto:vital-app@ifa-tech.com">vital-app@ifa-tech.com</a> and we will delete it.</p>
 
   <h2>10. Cookies and tracking</h2>
-  <p>The mobile application <strong>does not use cookies or advertising trackers</strong>. We do not use Google Analytics, Facebook Pixel, or similar tools. It does keep some data on your phone so that it can work; Section 1.4 lists it.</p>
+  <p>The mobile application <strong>does not use cookies or advertising trackers</strong>. We do not use Google Analytics, Facebook Pixel, or similar tools. It does keep some data on your phone so that it can work; Section 1.4 lists it. These legal pages set no cookies either; GitHub, which hosts them, records the IP address of each visit (Section 4).</p>
   <p>If we enable analytics in the future, it will be with a privacy-respecting provider (self-hosted PostHog or similar) and we will ask for your prior consent.</p>
 
   <h2>11. Artificial intelligence</h2>
-  <p>Vital uses AI models provided by OpenRouter, which routes to models such as Google Gemini, Moonshot Kimi K2, and others. The data you send to the assistant (text, audio, photos) is processed in real time to generate the response and <strong>is not used to train models</strong>, under our current agreement with OpenRouter and the policies of the selected models.</p>
+  <p>Vital's AI features reach an AI model through OpenRouter. Today all of them use Google's Gemini 3.5 Flash-Lite model, which Google runs on Google Cloud Vertex AI. The data you send them (text, voice, photos and the health entries listed in Section 11.2) is processed in real time to produce the answer. The AI services use it only to produce the answers, readings, checks, suggestions and summaries you see in Vital, never for advertising or to train their models, and <strong>Vital does not use your data to train AI models.</strong> Every request also asks OpenRouter to use only model providers that, by OpenRouter's classification, do not collect user data, rather than providers that may store it or train on it.</p>
   <h3>11.1 Your permission</h3>
   <p>AI features send part of your information to AI services run by other companies. <strong>Until you allow them, nothing is sent and the AI features stay off.</strong></p>
   <ul>
     <li><strong>It is your explicit consent, separate from this Policy.</strong> You give it inside the app, in its own prompt, before the first AI feature runs. One permission covers all AI features. Accepting this Policy does not give it.</li>
     <li><strong>It is recorded.</strong> We save each decision (allowed or turned off) with its date and the version of the explanation shown to you.</li>
-    <li><strong>You can withdraw it at any time</strong> in Settings → Privacy and data, <strong>without deleting your account</strong>. From then on nothing more is sent. Withdrawing cannot recall information that has already been processed.</li>
+    <li><strong>You can withdraw it at any time</strong> in Settings → Privacy and data, <strong>without deleting your account</strong>. From then on nothing more is sent; a withdrawal made without a connection reaches our server when the phone is back online. Withdrawing cannot recall information that has already been processed.</li>
   </ul>
 
   <h3>11.2 What each AI feature sends</h3>
   <p>Once you have allowed AI features, these are the features that send information to OpenRouter, and what each one sends. Some run by themselves; the rest run when you use them.</p>
   <ul>
-    <li><strong>Assistant chat.</strong> What you type or say to the assistant, the photo you send it if you add one (for example of a medication, your skin, a wound or a meal), and the recent messages of the conversation (up to the last 30), including the confirmations of anything the assistant records for you. A photo goes with its own message only and Vital does not store it; earlier messages mention it only with the word “[foto]” (Spanish for “photo”, as the app sends it in either language). It runs when you send a message.</li>
-    <li><strong>Voice dictation.</strong> The recording of your voice, to turn it into text. It runs when you dictate with the microphone.</li>
-    <li><strong>Pill and prescription photos.</strong> The photo you take or choose. A prescription photo can show your name and your doctor's. It runs when you take or choose a photo to identify a pill or read a prescription.</li>
-    <li><strong>Medication information and interaction checks.</strong> The name of the medication you look up, or the names of your medications for an interaction check. Doses and other details are not sent. They run when you open a medication's information or the interaction check, and an interaction check also runs by itself when you save a new medication, to compare it with your others. When a caregiver you allowed adds a medication to your list, the check runs on their phone with the names of your medications, only if you have allowed AI features (and so have they).</li>
+    <li><strong>Assistant chat.</strong> What you type or say to the assistant, the photo you send it if you add one (for example of a medication, your skin, a wound or a meal), and the recent messages of the conversation (up to the last 30, and at most 16,000 characters), including the assistant's offers to save something and what you did with each one. A photo goes with its own message only, without the details stored in its file about where, when and with which device it was taken (our server removes them before sending it on), and Vital does not store it; earlier messages mention it only with the word “[foto]” (Spanish for “photo”, as the app sends it in either language). It runs when you send a message. What the assistant offers to save is saved only when you tap “Save”, which sends nothing to the AI model: our server checks it again and writes it to your account. If your app has not yet been updated to show “Save”, the reply lists the offers with a 4-digit code, you save them by replying “save” and the code (for example “save 4821”), and our server keeps them for 30 minutes and then deletes them (Section 6).</li>
+    <li><strong>Voice dictation.</strong> The recording of your voice (at most 10 minutes), to turn it into text. It runs when you hold to talk to the assistant.</li>
+    <li><strong>Pill and prescription photos.</strong> The photo you take or choose, without the details stored in its file about where, when and with which device it was taken (our server removes them before sending it on). A prescription photo can show your name and your doctor's. Vital does not store it. It runs when you take or choose a photo to identify a pill or read a prescription.</li>
+    <li><strong>Medication information and interaction checks.</strong> The name of the medication you look up or, for an interaction check, the names of the active medications on your list, which our server reads from your account. Doses and other details are not sent. They run when you open a medication's information or the interaction check; an interaction check also runs by itself when you save or rename a medication, when you save one the assistant offered, when you add one a caregiver proposed, and when you open the Medications tab with a medication whose check did not finish, to compare it with your others.</li>
     <li><strong>Daily suggestions.</strong> A snapshot of your day: how many of today's doses were taken, skipped, missed or are still pending; today's mood; whether you logged pain today; your adherence over the last 7 days; and the symptoms and pain you logged in the last 3 days. It runs by itself when you open Vital.</li>
-    <li><strong>Pattern detection.</strong> Your saved medications (name, dose and start date) and, for the last 30 days, the status of each scheduled dose, your symptoms, pain entries, mood, stress and energy check-ins, and manual measurements such as blood pressure or glucose. It runs by itself in the background after you save a medication or a measurement, or when the assistant records a medication, symptom, pain entry or measurement for you, and whenever you ask for it from the Health tab.</li>
+    <li><strong>Pattern detection.</strong> Your saved medications (name, dose and start date) and, for the last 30 days, the status of each scheduled dose, your symptoms, pain entries, mood, stress and energy check-ins, and manual measurements such as blood pressure or glucose. It runs by itself in the background after you save a medication or a measurement, or a medication, symptom, pain entry or measurement the assistant offered, and whenever you ask for it from the Health tab.</li>
     <li><strong>Report summary.</strong> From the medical report for the last 30 days: adherence figures, your medications (name, dose and times of day), symptoms and pain entries with their dates, and your average mood. Before the data is sent on, our server keeps only these fields, so your name, email and account ID are left out. It runs by itself when you open the medical report.</li>
   </ul>
 
   <p>AI responses <strong>may contain errors</strong> and never constitute medical advice. Read the full <a href="./medical-disclaimer.html">Medical Disclaimer</a>.</p>
 
   <h2>12. Changes to this Policy</h2>
-  <p>We will notify you of material changes at least <strong>30 days</strong> in advance through the app or by email. The "last updated" date appears at the top.</p>
+  <p>If we make a material change to this Policy, we will tell you in the app or by email before it takes effect. If a change would let us use or share data you already gave us in a materially different way, or collect new categories of health data or use them for new purposes, we will ask for your consent first; without it, the change will not apply to your data. We will also ask you to accept the new Policy in the app. The “last updated” date appears at the top.</p>
 
   <h2>13. Contact</h2>
   <p>
     <strong>Privacy:</strong> <a href="mailto:vital-app@ifa-tech.com">vital-app@ifa-tech.com</a><br>
     <strong>General support:</strong> <a href="mailto:vital-app@ifa-tech.com">vital-app@ifa-tech.com</a><br>
-    <strong>Mailing address:</strong> 7950 NW 53rd St, Suite 342, Doral, FL 33166, USA
+    <strong>Mailing address:</strong> IFA- TECH LLC, 7950 NW 53rd St, Suite 342, Doral, FL 33166, USA
   </p>
 
 </body>
